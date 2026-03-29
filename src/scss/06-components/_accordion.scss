@@ -1,0 +1,75 @@
+/*! purgecss start ignore */
+.accordion {
+  --bs-accordion-border-radius: 16px;
+
+  &-item {
+    border: 0.0625rem solid #004975 !important;
+    border-radius: 16px;
+    padding: 28px 72px 28px 24px !important;
+    position: relative;
+    @include media-breakpoint-down(lg) {
+      padding-right: 3.7rem !important;
+    }
+  }
+  &-item + &-item {
+    margin-top: 24px;
+  }
+  &-button {
+    outline: none !important;
+    cursor: pointer;
+    box-shadow: none !important;
+    color: var(--color-light);
+    padding: 0 !important;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    position: initial;
+    @include media-breakpoint-down(lg) {
+      font-size: 0.9375rem;
+      line-height: 1.875rem;
+    }
+  }
+  &-button:not(.collapsed) {
+    color: var(--color-light);
+    &::before {
+      transform: rotate(-180deg);
+    }
+  }
+  &-button::after {
+    display: none;
+  }
+  &-button::before {
+    content: "";
+    position: absolute;
+    background-color: transparent !important;
+    background-image: url("../images/ico/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 10px;
+    right: 40px;
+    top: 48%;
+    position: absolute;
+    transition: transform 0.25s ease;
+    @include media-breakpoint-down(lg) {
+      right: 24px;
+    }
+  }
+  &-body {
+    padding: 8px 0 0 0;
+    p + p {
+      margin-top: 1rem;
+    }
+    p {
+      display: block;
+      color: var(--color-gray-300);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .collapse:not(.show) {
+    display: none !important;
+  }
+}
+/*! purgecss end ignore */

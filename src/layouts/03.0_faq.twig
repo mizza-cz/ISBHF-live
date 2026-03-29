@@ -1,0 +1,19 @@
+{% extends "@components/base/base.twig" %} {% set title = "03.0_faq" %} {% block
+main %}
+
+<main class="main" aria-label="Hlavní obsah">
+  <section class="subpage">
+    <div class="container-fluid">
+      <h1 class="h2 titleDecore text-white text-uppercase mb-6">FAQ</h1>
+      {% include "@components/faqAccordion/faqAccordion.twig" %}
+      <div class="mt-10">
+        <div class="text-md text-center text-gray-300">
+          If you haven’t found the answer,
+          <a href="#" class="d-block text-accent underline">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

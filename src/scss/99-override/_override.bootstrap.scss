@@ -85,7 +85,7 @@
   color: var(--color-gray-200);
 }
 .text-gray-300 {
-  color: var(--color-gray-200);
+  color: var(--color-gray-300);
 }
 .bg-gray-300 {
   color: var(--color-gray-300);
@@ -93,6 +93,11 @@
 
 .container {
   max-width: 87.4rem !important;
+  padding: 0 16px !important;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 58.6rem !important;
   padding: 0 16px !important;
   margin: 0 auto;
 }
@@ -141,7 +146,6 @@
     aspect-ratio: 16/9;
   }
 }
-.border-bottom-1{
-  
+.border-bottom-1 {
 }
 /*! purgecss end ignore */
