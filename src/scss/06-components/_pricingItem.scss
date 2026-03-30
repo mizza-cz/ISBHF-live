@@ -1,0 +1,55 @@
+.pricingItem {
+  border-radius: 1rem;
+  background: var(--color-blue-600);
+  padding: 24px;
+  height: 100%;
+  border: 3px solid transparent;
+  box-shadow: 0px 4px 40px 0px rgba(247, 96, 43, 0.12);
+  transition: all 0.25s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    border: 3px solid rgba(247, 96, 43, 0.2);
+    box-shadow: 0px 4px 76px 0px #f7602b33;
+    background: linear-gradient(180deg, #003c61 65%, #f7602b 170%);
+
+    .btn {
+      background: var(--color-light);
+      color: var(--color-dark);
+      border-color: var(--color-light);
+    }
+  }
+  &__list {
+    margin-bottom: 16px;
+    color: var(--color-gray-300);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    li + li {
+      margin-top: 12px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 32px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: center / contain no-repeat url("../images/ico/check.svg");
+      }
+    }
+  }
+  .btn {
+    color: var(--color-white);
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    justify-content: center;
+    transition: all 0.25s;
+  }
+}

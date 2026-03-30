@@ -1,5 +1,6 @@
 :root {
   --color-light: #fafafa;
+  --color-extra-light: #f1f3f5;
   --color-white: #ffffff;
   --color-gray-100: #e8e8e8;
   --color-gray-200: #cfcfcf;
@@ -31,4 +32,6 @@
   --bs-border-radius-sm: 6px;
 
   --bs-border-color: #7cb0db;
+  --bs-border-style: solid;
+  --bs-border-width: 1px;
 }

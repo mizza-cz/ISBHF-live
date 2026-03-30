@@ -53,10 +53,9 @@
     <link rel="preload" href="js/scripts.js" as="script" />
     <!-- ****** scripts ****** -->
   </head>
-  <body class="bg-blue-600">
+  <body>
     <div class="base">
-      {% include "@components/header/header.twig" %} {% block main %}{% endblock
-      %} {% include "@components/footer/footer.twig"%}
+      {% block main %}   {% endblock %}
     </div>
     <script
       defer

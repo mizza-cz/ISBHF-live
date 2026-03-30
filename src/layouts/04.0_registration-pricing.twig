@@ -1,0 +1,120 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"04.0_registration-pricing" %} {% block main %}
+
+<div class="bg-gradient-1">
+  {% include "@components/header/header.twig" %}
+  <main class="main bg-gradient-1" aria-label="Hlavní obsah">
+    <section class="pt-lg-16 pt-10 pb-lg-20 pb-10">
+      <div class="container">
+        <div class="text-center mb-6">
+          <h1 class="h2 text-light mb-4">
+            Your account is ready — start watching today
+          </h1>
+
+          <p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
+            Watch live matches, access full replays, and follow international
+            ball hockey events worldwide.
+          </p>
+        </div>
+
+        <div class="row g-4 mb-8">
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="pricingItem">
+              <h2 class="h2 text-extra-light mb-4">Day Pass</h2>
+              <p class="text-gray-300 text-md mb-4">
+                Perfect for getting started and exploring ISBHF content.
+              </p>
+              <div
+                class="border-top border-bottom py-4 d-flex align-items-center gap-2 mb-4"
+              >
+                <div class="h2 text-white">€2,99</div>
+                <p class="text-gray-300 text-md">per month</p>
+              </div>
+              <div class="h3 text-light mb-4">Includes</div>
+              <ul class="pricingItem__list">
+                <li>Live matches (selected games)</li>
+                <li>Highlights & short replays</li>
+                <li>Event schedules & results</li>
+                <li>Basic account access</li>
+              </ul>
+              <div class="btn-stroke btn">Select Day Pass</div>
+            </a>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="pricingItem">
+              <h2 class="h2 text-extra-light mb-4">Play-off Pass</h2>
+              <p class="text-gray-300 text-md mb-4">
+                Perfect for getting started and exploring ISBHF content.
+              </p>
+              <div
+                class="border-top border-bottom py-4 d-flex align-items-center gap-2 mb-4"
+              >
+                <div class="h2 text-white">€5,99</div>
+                <p class="text-gray-300 text-md">per month</p>
+              </div>
+              <div class="h3 text-light mb-4">Includes</div>
+              <ul class="pricingItem__list">
+                <li>Live matches (selected games)</li>
+                <li>Highlights & short replays</li>
+                <li>Event schedules & results</li>
+                <li>Basic account access</li>
+              </ul>
+              <div class="btn-stroke btn">Select Play-off Pass</div>
+            </a>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="pricingItem">
+              <div class="d-flex flex-wrap gap-2 justify-content-between mb-4">
+                <h2 class="h2 text-extra-light">Event Pass</h2>
+                <div class="pricingItem__popular">Popular</div>
+              </div>
+              <p class="text-gray-300 text-md mb-4">
+                The best way to follow championships live and on demand.
+              </p>
+              <div
+                class="border-top border-bottom py-4 d-flex align-items-center gap-2 mb-4"
+              >
+                <div class="h2 text-white">€9,99</div>
+                <p class="text-gray-300 text-md">per month</p>
+              </div>
+              <div class="h3 text-light mb-4">Includes</div>
+              <ul class="pricingItem__list">
+                <li>Full access to live matches</li>
+                <li>Full match replays (on-demand)</li>
+                <li>Watch history</li>
+                <li>Access to all championships</li>
+              </ul>
+              <div class="btn-stroke btn">Select Event Pass</div>
+            </a>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="pricingItem">
+              <h2 class="h2 text-extra-light mb-4">All Access</h2>
+              <p class="text-gray-300 text-md mb-4">
+                For true fans who don’t want to miss a moment.
+              </p>
+              <div
+                class="border-top border-bottom py-4 d-flex align-items-center gap-2 mb-4"
+              >
+                <div class="h2 text-white">€20,99</div>
+                <p class="text-gray-300 text-md">per month</p>
+              </div>
+              <div class="h3 text-light mb-4">Includes</div>
+              <ul class="pricingItem__list">
+                <li>Everything in Standard</li>
+                <li>Early access to selected matches</li>
+                <li>Extended replay archive</li>
+              </ul>
+              <div class="btn-stroke btn">Select All Access</div>
+            </a>
+          </div>
+        </div>
+        <button class="btn btn-stroke mx-auto text-white">
+          Add promo code
+        </button>
+      </div>
+    </section>
+  </main>
+</div>
+
+{% endblock %}

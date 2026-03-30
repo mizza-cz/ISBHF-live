@@ -63,6 +63,9 @@
 .text-light {
   color: var(--color-light) !important;
 }
+.text-extra-light {
+  color: var(--color-extra-light) !important;
+}
 .text-white {
   color: var(--color-white) !important;
 }
@@ -115,6 +118,12 @@
 }
 .bg-white {
   background-color: var(--color-white) !important;
+}
+.bg-gradient-1 {
+  background: linear-gradient(180deg, rgba(0, 90, 142, 0.95) 0%, #003a5f 93.5%);
+  .header {
+    background: rgba(0, 90, 142, 0.95);
+  }
 }
 .underline {
   transition: all 0.3s;

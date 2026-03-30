@@ -1,19 +1,20 @@
 {% extends "@components/base/base.twig" %} {% set title = "03.0_faq" %} {% block
 main %}
-
-<main class="main" aria-label="Hlavní obsah">
-  <section class="subpage">
-    <div class="container-fluid">
-      <h1 class="h2 titleDecore text-white text-uppercase mb-6">FAQ</h1>
-      {% include "@components/faqAccordion/faqAccordion.twig" %}
-      <div class="mt-10">
-        <div class="text-md text-center text-gray-300">
+<div class="bg-blue-600">
+  {% include "@components/header/header.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-10 pb-lg-20 pb-10">
+      <div class="container-fluid">
+        <h1 class="h2 titleDecore text-white text-uppercase mb-6">FAQ</h1>
+        {% include "@components/faqAccordion/faqAccordion.twig" %}
+        <div class="text-md text-center text-gray-300 mt-10">
           If you haven’t found the answer,
           <a href="#" class="d-block text-accent underline">Contact us</a>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+  {% include "@components/footer/footer.twig"%}
+</div>
 
 {% endblock %}
