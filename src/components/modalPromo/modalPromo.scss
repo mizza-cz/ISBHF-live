@@ -1,0 +1,124 @@
+.modalPromo .modal-content {
+  background: var(--color-blue-600);
+  border-radius: 16px;
+  border: none;
+  padding: 24px;
+}
+
+.modalPromo .modal-header {
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.modalPromo .modal-title {
+  color: var(--color-light);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.modalPromo .modal-close {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  svg path {
+    transition: all 0.25s;
+  }
+  &:hover {
+    svg path {
+      stroke: var(--color-accent);
+    }
+  }
+}
+.modalPromo .modal-body {
+  padding: 0;
+}
+.modalPromoForm {
+  &-box {
+    position: relative;
+  }
+  &-label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    font-weight: 400;
+    width: max-content;
+    font-size: 14px;
+    line-height: 20px;
+    transform: translateY(-50%);
+    color: var(--color-gray-300);
+    transition: all 0.2s;
+  }
+  &-input {
+    background: var(--color-blue-400);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    height: 3.8rem;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 12px;
+    outline: none;
+    padding-right: 12px;
+    padding-top: 22px;
+    color: var(--color-light);
+    &::placeholder {
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+  &-input:focus {
+    background: var(--color-blue-400);
+    border-color: var(--color-accent);
+  }
+}
+// napisano  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+/* label */
+
+.modalPromoForm-input:not(:placeholder-shown) + label,
+.modalPromoForm-input:focus ~ label {
+  top: 16px;
+}
+
+/* === BUTTON === */
+
+.modalPromo .modalPromoForm-btn {
+  background: var(--color-gray-300);
+  border: none;
+  color: var(--color-dark);
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  width: 200px;
+  margin-top: 24px;
+  &:hover {
+    background: var(--color-accent);
+    color: var(--color-light);
+  }
+}
+.modalPromoForm-error {
+  font-size: 12px;
+  color: var(--color-gray-300);
+  margin-top: 4px;
+}
+.modalPromoForm-box.error {
+  .modalPromoForm-input {
+    border: 1px solid var(--color-accent);
+    color: #ffbca6;
+  }
+}

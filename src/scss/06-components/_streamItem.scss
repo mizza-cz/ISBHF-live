@@ -1,0 +1,49 @@
+.streamItem {
+  text-decoration: none;
+  display: block;
+  &:hover {
+    .h5 {
+      text-decoration-color: var(--color-light);
+    }
+  }
+  .btn {
+    padding: 0.25rem 0.75rem;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 268/150;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .h5 {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s;
+  }
+  &__lock {
+    position: absolute;
+    padding: 0.25rem 0.75rem;
+    top: 12px;
+    right: 12px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-dark);
+    img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+  }
+}

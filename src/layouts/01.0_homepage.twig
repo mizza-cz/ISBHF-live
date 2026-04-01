@@ -1,16 +1,346 @@
 {% extends "@components/base/base.twig" %} {% set title = "01.0_homepage" %} {%
 block main %}
-<div class="topGradient">
+<div class="topstory-gradient">
   {% include "@components/header/header.twig" %} {% include
   "@components/topstory/topstory.twig" %}
 </div>
+<div class="bg-blue-600">
+  <main class="main" aria-label="Hlavní obsah">
+    <!-- LIVE NOW  start  -->
+    <section class="pb-10">
+      <div class="container">
+        <div
+          class="d-flex mb-6 justify-content-between align-items-center gap-3 flex-wrap"
+        >
+          <h2 class="h2 text-white text-uppercase titleDecore">Live now</h2>
+          <a href="#" class="btn btn-stroke text-light">
+            Schedule {% include "@images/chevron-right.svg" %}
+          </a>
+        </div>
+        <div class="row g-3">
+          {% for i in 1..2 %}
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="streamItem">
+              <div class="streamItem__img">
+                <img
+                  src="images/content/match-live-1.png"
+                  loading="lazy"
+                  alt="match"
+                />
+                <div class="btn btn-primary text-sm">Live</div>
+                <div class="streamItem__lock">
+                  <img src="images/ico/lock.svg" alt="lock" />
+                </div>
+              </div>
+              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                <li>
+                  <img
+                    src="images/content/edmont.png"
+                    width="20"
+                    height="20"
+                    class="object-fit-contain"
+                    alt=""
+                  />
+                  U20 Men’s
+                </li>
+                <li>Group B</li>
+              </ul>
+              <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+            </a>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="streamItem">
+              <div class="streamItem__img">
+                <img
+                  src="images/content/match-live-2.png"
+                  loading="lazy"
+                  alt="match"
+                />
+                <div class="btn btn-primary text-sm">Live</div>
+                <div class="streamItem__lock">
+                  <img src="images/ico/lock.svg" alt="lock" />
+                </div>
+              </div>
+              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                <li>
+                  <img
+                    src="images/content/event-1.png"
+                    width="20"
+                    height="20"
+                    class="object-fit-contain"
+                    alt=""
+                  />
+                  Páňa Cup 2025
+                </li>
+                <li>Bronze</li>
+              </ul>
+              <h5 class="h5 text-light">USA vs. Slovakia</h5>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- LIVE NOW end  -->
 
-<main class="main" aria-label="Hlavní obsah">
-  {% include "@components/matchesLive/matchesLive.twig" %} {% include
-  "@components/infoBoard/infoBoard.twig" %} {% include
-  "@components/aboutBoard/aboutBoard.twig" %} {% include
-  "@components/videoSlider/videoSlider.twig" %} {% include
-  "@components/partnersSlider/partnersSlider.twig" %}
-</main>
+    <!--   FEATURED EVENTS. Start  -->
+    <div class="pb-10">
+      <div class="container">
+        <div
+          class="d-flex mb-6 justify-content-between align-items-center gap-3 flex-wrap"
+        >
+          <h2 class="h2 text-white text-uppercase titleDecore">
+            FEATURED EVENTS
+          </h2>
+          <a href="#" class="btn btn-stroke text-light">
+            All Events {% include "@images/chevron-right.svg" %}
+          </a>
+        </div>
+        <div class="row g-4">
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="eventItem justify-content-center">
+              <a href="#" class="eventItem__img">
+                <img
+                  class="object-fit-contain"
+                  alt="app"
+                  src="images/content/event-1.png"
+                  width="100%"
+                  height="90px"
+                />
+                <div class="eventItem__star">
+                  {% include "@images/star.svg" %}
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="eventItem justify-content-center">
+              <a href="#" class="eventItem__img">
+                <img
+                  class="object-fit-contain"
+                  alt="app"
+                  src="images/content/event-2.png"
+                  width="100%"
+                  height="90px"
+                />
+                <div class="eventItem__star">
+                  {% include "@images/star.svg" %}
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="eventItem justify-content-center">
+              <a href="#" class="eventItem__img">
+                <img
+                  class="object-fit-contain"
+                  alt="app"
+                  src="images/content/event-3.png"
+                  width="100%"
+                  height="90px"
+                />
+                <div class="eventItem__star">
+                  {% include "@images/star.svg" %}
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="eventItem justify-content-center">
+              <a href="#" class="eventItem__img">
+                <img
+                  class="object-fit-contain"
+                  alt="app"
+                  src="images/content/event-banska.svg"
+                  width="100%"
+                  height="90px"
+                />
+                <div class="eventItem__star">
+                  {% include "@images/star.svg" %}
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="eventItem justify-content-center">
+              <a href="#" class="eventItem__img">
+                <img
+                  class="object-fit-contain"
+                  alt="app"
+                  src="images/content/event-bratislava.png"
+                  width="100%"
+                  height="90px"
+                />
+                <div class="eventItem__star">
+                  {% include "@images/star.svg" %}
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="eventItem justify-content-center">
+              <a href="#" class="eventItem__img">
+                <img
+                  class="object-fit-contain"
+                  alt="app"
+                  src="images/content/event-sheffield.png"
+                  width="100%"
+                  height="90px"
+                />
+                <div class="eventItem__star">
+                  {% include "@images/star.svg" %}
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--   FEATURED EVENTS. End  -->
+    <!--   Men's  Championship / Start -->
+    <section class="bg-purple pt-10 eventsSlider-section">
+      <div class="container">
+        <div
+          class="d-flex mb-lg-10 mb-6 justify-content-between align-items-center gap-3 flex-wrap"
+        >
+          <div class="d-flex align-items-center gap-4">
+            <img
+              class="object-fit-contain"
+              width="64"
+              height="64"
+              src="images/content/event-2.png"
+              alt="event"
+              loading="lazy"
+            />
+            <h2 class="h2 text-white text-uppercase">
+              2025 Men's Masters World Championship
+            </h2>
+          </div>
+          <a href="#" class="btn btn-pink text-light">
+            All Events {% include "@images/chevron-right.svg" %}
+          </a>
+        </div>
+        <div class="pb-10">
+          <h4 class="h2 text-light mb-4">Live & Upcoming Games</h4>
+          {% include "@components/eventsSlider/eventsSlider.twig" %}
+        </div>
+        <div class="pb-10">
+          <h4 class="h2 text-light mb-4">Latest Replays</h4>
+          {% include "@components/eventsSlider/eventsSlider.twig" %}
+        </div>
+      </div>
+    </section>
+    <!--   Men's   Championship / End -->
+
+    <!--   Men’s & Women’s Championships  / Start -->
+    <div class="bg-gray pt-10 eventsSlider-section">
+      <div class="container">
+        <div
+          class="d-flex mb-lg-10 mb-6 justify-content-between align-items-center gap-3 flex-wrap"
+        >
+          <div class="d-flex align-items-center gap-4">
+            <img
+              class="object-fit-contain"
+              width="64"
+              height="64"
+              src="images/content/event-1.png"
+              alt="event"
+              loading="lazy"
+            />
+            <h2 class="h2 text-white text-uppercase">
+              2025 U20 Men’s & Women’s Championships
+            </h2>
+          </div>
+          <a href="#" class="btn btn-blue text-light">
+            All Events {% include "@images/chevron-right.svg" %}
+          </a>
+        </div>
+        <div class="pb-10">
+          <h4 class="h2 text-light mb-4">Live & Upcoming Games</h4>
+          {% include "@components/eventsSlider/eventsSlider.twig" %}
+        </div>
+        <div class="pb-10">
+          <h4 class="h2 text-light mb-4">Live & Upcoming Games</h4>
+          {% include "@components/eventsSlider/eventsSlider.twig" %}
+        </div>
+      </div>
+    </div>
+    <!--   Men’s & Women’s Championships  / End -->
+
+    <!-- Watch History  / Start  -->
+    <section class="pt-10">
+      <div class="container">
+        <h5 class="h2 mb-6 text-white text-uppercase titleDecore">
+          WATCH HISTORY.
+        </h5>
+        <div class="row g-3 mb-10">
+          {% for i in 1..2 %}
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="streamItem">
+              <div class="streamItem__img">
+                <img
+                  src="images/content/match-live-1.png"
+                  loading="lazy"
+                  alt="match"
+                />
+                <div class="btn btn-primary text-sm">Live</div>
+                <div class="streamItem__lock">
+                  <img src="images/ico/lock.svg" alt="lock" />
+                </div>
+              </div>
+              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                <li>
+                  <img
+                    src="images/content/edmont.png"
+                    width="20"
+                    height="20"
+                    class="object-fit-contain"
+                    alt=""
+                  />
+                  U20 Men’s
+                </li>
+                <li>Group B</li>
+              </ul>
+              <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+            </a>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="streamItem">
+              <div class="streamItem__img">
+                <img
+                  src="images/content/match-live-2.png"
+                  loading="lazy"
+                  alt="match"
+                />
+                <div class="btn btn-primary text-sm">Live</div>
+                <div class="streamItem__lock">
+                  <img src="images/ico/lock.svg" alt="lock" />
+                </div>
+              </div>
+              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                <li>
+                  <img
+                    src="images/content/event-1.png"
+                    width="20"
+                    height="20"
+                    class="object-fit-contain"
+                    alt=""
+                  />
+                  Páňa Cup 2025
+                </li>
+                <li>Bronze</li>
+              </ul>
+              <h5 class="h5 text-light">USA vs. Slovakia</h5>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Watch History  / End  -->
+    {% include "@components/partnersSlider/partnersSlider.twig" %}
+  </main>
+  {% include "@components/footer/footer.twig" %}
+</div>
 
 {% endblock %}

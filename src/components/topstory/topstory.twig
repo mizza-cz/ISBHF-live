@@ -1,179 +1,198 @@
 <section class="topstory">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <a href="#" class="topstoryMain">
-          <img
-            srcset="
-              https://picsum.photos/1474/990 1474w,
-              https://picsum.photos/737/495   600w
-            "
-            sizes="
-             (min-width: 737px) 737w
-           "
-            width="737"
-            height="495"
-            alt=""
-          />
-          <div class="topstoryMain__content">
-            <ul class="tags text-gray-200 mb-2">
-              <li>
-                <img
-                  src="images/ico/isbhf-world.svg"
-                  width="20"
-                  height="20"
-                  class="object-fit-contain"
-                  alt=""
-                />
-                News
-              </li>
-              <li>November 17, 2024</li>
-            </ul>
-            <h1 class="h1 text-light mb-2">
-              World Masters Championship set to return to Bermuda in 2025
-            </h1>
-            <p class="text-gray-200">
-              Following the official bid, Bermuda has been approved as the host
-              of the Masters World Championship during the November ISBHF 2024
-              Semi-Annual Conference.
-            </p>
+    <div class="swiper topstorySlider">
+      <button class="swiper-btn--blue prev" aria-label="Previous">
+        {% include "@images/chevron-down.svg" %}
+      </button>
+      <ul role="list" class="swiper-wrapper infinite-scroll-swiper">
+        <li class="swiper-slide">
+          <div class="topstoryItem">
+            <a href="#" class="topstoryItem__link"></a>
+            <picture class="topstoryItem__img">
+              <source
+                media="(max-width: 575px)"
+                srcset="
+                  https://picsum.photos/480/240 480w,
+                  https://picsum.photos/640/320 640w
+                "
+                sizes="100vw"
+              />
+
+              <source
+                media="(max-width: 991px)"
+                srcset="
+                  https://picsum.photos/768/384   768w,
+                  https://picsum.photos/1024/512 1024w
+                "
+                sizes="100vw"
+              />
+
+              <source
+                media="(min-width: 992px)"
+                srcset="
+                  https://picsum.photos/1280/640 1280w,
+                  https://picsum.photos/1920/960 1920w
+                "
+                sizes="100vw"
+              />
+
+              <img
+                src="https://picsum.photos/1280/640"
+                width="1280"
+                height="640"
+                alt=""
+                loading="eager"
+                fetchpriority="high"
+              />
+            </picture>
+            <div class="topstoryItem__content">
+              <div class="topstoryItem__logo">
+                <img src="images/content/event-3.png" alt="event" />
+              </div>
+
+              <div class="d-flex flex-column gap-lg-6 gap-4">
+                <h1 class="h1 text-light titleDecore mb-lg-6 mb-4">
+                  After nine years, the Ball Hockey World Championships returns
+                  to Czechia
+                </h1>
+                <div class="d-flex gap-4 flex-wrap">
+                  <a href="#" class="btn-primary btn text-lg fw-medium">
+                    Watch now {% include "@images/chevron-right.svg" %}
+                  </a>
+                  <a href="#" class="btn btn-light text-lg fw-medium">
+                    Pricing {% include "@images/chevron-right.svg" %}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </a>
-      </div>
-      <div class="col-lg-5">
-        <a href="#" class="topstoryItem">
-          <div class="topstoryItem__img">
-            <img
-              srcset="
-                https://picsum.photos/386/256 386w,
-                https://picsum.photos/193/128 193w
-              "
-              sizes="
-            (min-width: 193px) 193w
-          "
-              width="193"
-              height="128"
-              loading="lazy"
-              alt="post"
-            />
+        </li>
+        <li class="swiper-slide">
+          <div class="topstoryItem">
+            <a href="#" class="topstoryItem__link"></a>
+            <picture class="topstoryItem__img">
+              <source
+                media="(max-width: 575px)"
+                srcset="
+                  https://picsum.photos/480/240 480w,
+                  https://picsum.photos/640/320 640w
+                "
+                sizes="100vw"
+              />
+
+              <source
+                media="(max-width: 991px)"
+                srcset="
+                  https://picsum.photos/768/384   768w,
+                  https://picsum.photos/1024/512 1024w
+                "
+                sizes="100vw"
+              />
+
+              <source
+                media="(min-width: 992px)"
+                srcset="
+                  https://picsum.photos/1280/640 1280w,
+                  https://picsum.photos/1920/960 1920w
+                "
+                sizes="100vw"
+              />
+
+              <img
+                src="https://picsum.photos/1280/640"
+                width="1280"
+                height="640"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+            <div class="topstoryItem__content">
+              <div class="topstoryItem__logo">
+                <img src="images/content/event-1.png" alt="event" />
+              </div>
+
+              <div class="d-flex flex-column gap-lg-6 gap-4">
+                <h2 class="h1 text-light titleDecore mb-lg-6 mb-4">
+                  After nine years, the Ball Hockey World Championships returns
+                  to Czechia
+                </h2>
+                <div class="d-flex gap-4 flex-wrap">
+                  <a href="#" class="btn-primary btn text-lg fw-medium">
+                    Watch now {% include "@images/chevron-right.svg" %}
+                  </a>
+                  <a href="#" class="btn btn-light text-lg fw-medium">
+                    Pricing {% include "@images/chevron-right.svg" %}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="topstoryItem__content">
-            <ul class="tags text-gray-200 text-sm mb-12">
-              <li>
-                <img
-                  srcset="images/ico/isbhf-world.svg"
-                  width="14"
-                  height="14"
-                  loading="lazy"
-                  alt="logo"
-                />
-                News
-              </li>
-              <li>November 17, 2024</li>
-            </ul>
-            <h2 class="text-lg fw-medium mb-2 text-light">
-              2024 ISBHF Men’s World Championsip – Recap
-            </h2>
-            <p class="text-gray-200">
-              Following the official bid, Bermuda has been approved as the host
-              of the Masters World Championship during the November ISBHF 2024
-              Semi-Annual Conference.
-            </p>
+        </li>
+        <li class="swiper-slide">
+          <div class="topstoryItem">
+            <a href="#" class="topstoryItem__link"></a>
+            <picture class="topstoryItem__img">
+              <source
+                media="(max-width: 575px)"
+                srcset="
+                  https://picsum.photos/480/240 480w,
+                  https://picsum.photos/640/320 640w
+                "
+                sizes="100vw"
+              />
+
+              <source
+                media="(max-width: 991px)"
+                srcset="
+                  https://picsum.photos/768/384   768w,
+                  https://picsum.photos/1024/512 1024w
+                "
+                sizes="100vw"
+              />
+
+              <source
+                media="(min-width: 992px)"
+                srcset="
+                  https://picsum.photos/1280/640 1280w,
+                  https://picsum.photos/1920/960 1920w
+                "
+                sizes="100vw"
+              />
+
+              <img
+                src="https://picsum.photos/1280/640"
+                width="1280"
+                height="640"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+            <div class="topstoryItem__content">
+              <div class="topstoryItem__logo">
+                <img src="images/content/event-2.png" alt="event" />
+              </div>
+
+              <div class="d-flex flex-column gap-lg-6 gap-4">
+                <h2 class="h1 text-light titleDecore mb-lg-6 mb-4">
+                  After nine years, the Ball Hockey World Championships returns
+                  to Czechia
+                </h2>
+                <div class="d-flex gap-4 flex-wrap">
+                  <a href="#" class="btn-primary btn text-lg fw-medium">
+                    Watch now {% include "@images/chevron-right.svg" %}
+                  </a>
+                  <a href="#" class="btn btn-light text-lg fw-medium">
+                    Pricing {% include "@images/chevron-right.svg" %}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </a>
-        <a href="#" class="topstoryItem">
-          <div class="topstoryItem__img">
-            <img
-              srcset="
-                https://picsum.photos/386/256 386w,
-                https://picsum.photos/193/128 193w
-              "
-              sizes="
-          (min-width: 193px) 193w
-        "
-              width="193"
-              height="128"
-              loading="lazy"
-              alt="post"
-            />
-          </div>
-          <div class="topstoryItem__content">
-            <ul class="tags text-gray-200 text-sm mb-12">
-              <li>
-                <img
-                  srcset="images/ico/isbhf-world.svg"
-                  width="14"
-                  height="14"
-                  loading="lazy"
-                  alt="logo"
-                />
-                News
-              </li>
-              <li>November 17, 2024</li>
-            </ul>
-            <h2 class="text-lg fw-medium mb-2 text-light">
-              2024 ISBHF Men’s World Championsip – Recap
-            </h2>
-            <p class="text-gray-200">
-              Following the official bid, Bermuda has been approved as the host
-              of the Masters World Championship during the November ISBHF 2024
-              Semi-Annual Conference.
-            </p>
-          </div>
-        </a>
-        <a href="#" class="topstoryItem">
-          <div class="topstoryItem__img">
-            <img
-              srcset="
-                https://picsum.photos/386/256 386w,
-                https://picsum.photos/193/128 193w
-              "
-              sizes="
-            (min-width: 193px) 193w
-          "
-              width="193"
-              height="128"
-              loading="lazy"
-              alt="post"
-            />
-          </div>
-          <div class="topstoryItem__content">
-            <ul class="tags text-gray-200 text-sm mb-12">
-              <li>
-                <img
-                  srcset="images/content/edmont.png"
-                  width="14"
-                  height="14"
-                  loading="lazy"
-                  alt="logo"
-                />
-                News
-              </li>
-              <li>November 17, 2024</li>
-            </ul>
-            <h2 class="text-lg fw-medium mb-2 text-light">
-              2024 ISBHF Men’s World Championsip – Recap
-            </h2>
-            <p class="text-gray-200">
-              Following the official bid, Bermuda has been approved as the host
-              of the Masters World Championship during the November ISBHF 2024
-              Semi-Annual Conference.
-            </p>
-          </div>
-        </a>
-      </div>
+        </li>
+      </ul>
+      <button class="swiper-btn--blue next" aria-label="Previous">
+        {% include "@images/chevron-down.svg" %}
+      </button>
     </div>
-    <a href="#" target="_blank" class="w-100 d-block mt-40">
-      <img
-        class="object-fit-cover w-100 h-auto"
-        alt="app"
-        src="images/content/ban-app.png"
-        sizes="
-         (min-width: 1280px) 1280w
-       "
-        width="1280"
-        height="180"
-      />
-    </a>
   </div>
 </section>

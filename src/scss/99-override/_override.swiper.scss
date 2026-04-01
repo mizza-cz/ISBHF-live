@@ -1,0 +1,60 @@
+/*! purgecss start ignore */
+.swiper {
+  position: relative;
+  .next,
+  .prev {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    @include media-breakpoint-down(lg) {
+      width: 32px;
+      height: 32px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      @include media-breakpoint-down(lg) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .next {
+    right: 1rem;
+    @include media-breakpoint-down(lg) {
+      right: 0.5rem;
+    }
+  }
+  .next svg {
+    transform: rotate(-90deg);
+    margin-right: -4px;
+  }
+  .prev {
+    left: 1rem;
+    @include media-breakpoint-down(lg) {
+      left: 0.5rem;
+    }
+  }
+  .prev svg {
+    transform: rotate(90deg);
+    margin-left: -4px;
+  }
+  .swiper-button-disabled {
+    opacity: 0.48;
+  }
+}
+
+.swiper-btn--blue {
+  background: var(--color-blue-600);
+}
+
+/*! purgecss end ignore */

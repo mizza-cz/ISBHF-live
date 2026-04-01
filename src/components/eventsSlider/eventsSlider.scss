@@ -1,0 +1,33 @@
+.bg-purple {
+  .swiper-btn {
+    background: var(--color-pink);
+  }
+}
+.bg-gray {
+  .swiper-btn {
+    background: var(--color-blue-500);
+  }
+}
+.eventsSlider-section {
+  .eventsSlider {
+    overflow: visible;
+    @include media-breakpoint-down(xxl) {
+      overflow: hidden;
+    }
+  }
+  .swiper-btn {
+    top: 35%;
+  }
+  .swiper-btn.next {
+    right: -3rem;
+    @include media-breakpoint-down(xxl) {
+      right: 0.5rem;
+    }
+  }
+  .swiper-btn.prev {
+    left: -3rem;
+    @include media-breakpoint-down(xxl) {
+      left: 0.5rem;
+    }
+  }
+}

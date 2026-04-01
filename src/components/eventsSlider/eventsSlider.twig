@@ -1,0 +1,27 @@
+<div class="swiper eventsSlider">
+  <button class="swiper-btn prev" aria-label="Previous">
+    {% include "@images/chevron-down.svg" %}
+  </button>
+  <ul role="list" class="swiper-wrapper infinite-scroll-swiper">
+    {% for i in 1..10 %}
+    <li class="swiper-slide">
+      <a href="#" class="streamItem">
+        <div class="streamItem__img mb-3">
+          <img src="https://picsum.photos/264/138" loading="lazy" alt="match" />
+          <div class="btn bg-blue-500 text-sm text-light">1:23:38</div>
+          <div class="streamItem__lock">
+            <img src="images/ico/lock.svg" alt="lock" />
+          </div>
+        </div>
+        <ul class="tags text-gray-200 mb-1 px-2 py-1 text-sm">
+          <li>5th Place</li>
+        </ul>
+        <div class="text-md text-light fw-medium">Canada vs. Greece</div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <button class="swiper-btn next" aria-label="Previous">
+    {% include "@images/chevron-down.svg" %}
+  </button>
+</div>

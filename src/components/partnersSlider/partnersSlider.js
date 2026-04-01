@@ -1,34 +1,24 @@
-$(".partnersSlider__inner").slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  arrows: false,
-  infinite: true,
-  autoplay: true,
-  speed: 500,
-  responsive: [
-    {
-      breakpoint: 931,
-      settings: {
-        slidesToShow: 4,
-      },
+const partnersSlider = document.querySelector(".partnersSlider");
+
+if (partnersSlider) {
+  new Swiper(partnersSlider, {
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    spaceBetween: 24,
+    loop: true,
+    speed: 500,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
-    {
-      breakpoint: 741,
-      settings: {
-        slidesToShow: 3,
-      },
+
+    breakpoints: {
+      0: { slidesPerView: 2 },
+      621: { slidesPerView: 2 },
+      741: { slidesPerView: 3 },
+      931: { slidesPerView: 4 },
+      1200: { slidesPerView: 5 },
     },
-    {
-      breakpoint: 621,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 421,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-  ],
-});
+  });
+}

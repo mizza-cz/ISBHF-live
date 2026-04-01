@@ -1,0 +1,48 @@
+<div class="modal fade modalPromo" id="promoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add promo code</h5>
+        <button type="button" class="modal-close" data-bs-dismiss="modal">
+          {% include "@images/close.svg" %}
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form class="modalPromoForm">
+          <!-- <div class="modalPromoForm-box">
+            <input
+              type="text"
+              class="modalPromoForm-input"
+              id="promoCode"
+              placeholder="Promo code"
+            />
+            <label class="modalPromoForm-label" for="promoCode"
+              >Promo code</label
+            >
+          </div> -->
+          <div class="modalPromoForm-box error">
+            <input
+              type="text"
+              class="modalPromoForm-input"
+              id="promoCode"
+              placeholder="Promo code"
+              value="ISBHF"
+            />
+            <label class="modalPromoForm-label" for="promoCode">
+              Promo code
+            </label>
+
+            <div class="modalPromoForm-error">
+              Invalid promo code. Please try again.
+            </div>
+          </div>
+
+          <button type="submit" class="btn modalPromoForm-btn">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--not valid  -->

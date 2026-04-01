@@ -1,67 +1,13 @@
 /*! purgecss start ignore */
-// .mt-40 {
-//   margin-top: 40px;
-//   @include media-breakpoint-down(lg) {
-//     margin-top: 32px;
-//   }
-// }
-// .mt-lg-40 {
-//   margin-top: 40px;
-//   @include media-breakpoint-down(lg) {
-//     margin-top: 32px;
-//   }
-// }
-// .pt-40 {
-//   padding-top: 40px;
-// }
-// .mb-lg-40 {
-//   margin-bottom: 40px;
-//   @include media-breakpoint-down(lg) {
-//     margin-bottom: 32px;
-//   }
-// }
-// .mb-64 {
-//   margin-bottom: 64px;
-//   @include media-breakpoint-down(lg) {
-//     margin-bottom: 40px;
-//   }
-// }
-// .mb-40 {
-//   margin-bottom: 40px;
-// }
-// .mb-20 {
-//   margin-bottom: 20px;
-// }
-// .mb-12 {
-//   margin-bottom: 12px !important;
-// }
-// .mt-12 {
-//   margin-top: 12px !important;
-// }
-// .mt-56 {
-//   margin-top: 56px;
-//   @include media-breakpoint-down(lg) {
-//     margin-top: 40px;
-//   }
-// }
-// .mb-56 {
-//   margin-bottom: 56px;
-//   @include media-breakpoint-down(lg) {
-//     margin-bottom: 40px;
-//   }
-// }
-// .gap-lg-40 {
-//   gap: 24px;
-//   @include media-breakpoint-up(lg) {
-//     gap: 40px;
-//   }
-// }
-.text-left {
-  text-align: left !important;
-}
 
 .text-light {
   color: var(--color-light) !important;
+}
+.text-dark {
+  color: var(--color-dark) !important;
+}
+.text-black {
+  color: var(--color-black) !important;
 }
 .text-extra-light {
   color: var(--color-extra-light) !important;
@@ -93,6 +39,9 @@
 .bg-gray-300 {
   color: var(--color-gray-300);
 }
+.bg-gray {
+  background: var(--color-bg-gray) !important;
+}
 
 .container {
   max-width: 87.4rem !important;
@@ -104,9 +53,14 @@
   padding: 0 16px !important;
   margin: 0 auto;
 }
+.container-xxs {
+  max-width: 416px;
+  margin: 0 auto;
+}
 .bg-blue-300 {
   background: var(--color-blue-300);
 }
+
 .bg-blue-500 {
   background-color: var(--color-blue-500);
 }
@@ -119,12 +73,13 @@
 .bg-white {
   background-color: var(--color-white) !important;
 }
+.bg-purple {
+  background: var(--color-purple) !important;
+}
 .bg-gradient-1 {
   background: linear-gradient(180deg, rgba(0, 90, 142, 0.95) 0%, #003a5f 93.5%);
-  .header {
-    background: rgba(0, 90, 142, 0.95);
-  }
 }
+
 .underline {
   transition: all 0.3s;
   text-decoration: underline;
@@ -155,6 +110,7 @@
     aspect-ratio: 16/9;
   }
 }
-.border-bottom-1 {
+.min-height-screen {
+  min-height: 100vh;
 }
 /*! purgecss end ignore */
