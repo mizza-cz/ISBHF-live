@@ -54,6 +54,8 @@
   position: absolute;
   right: 12px;
   top: 16px;
+  z-index: 2;
+  cursor: pointer;
 }
 .icon-hide {
   display: none;
