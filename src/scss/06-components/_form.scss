@@ -1,0 +1,68 @@
+.form {
+  &-box {
+    position: relative;
+  }
+  &-label {
+    position: absolute;
+    color: var(--color-gray-300);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    left: 12px;
+    top: 18px;
+    transition: all 0.25s ease;
+  }
+  &-control {
+    height: 60px;
+    width: 100%;
+    background: var(--color-blue-600);
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-white);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: background 0.25s ease;
+    padding-top: 18px;
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+  &-control:focus {
+    background: var(--color-blue-500);
+  }
+  &-submit {
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+.form-box:focus-within .form-label,
+.form-box:has(.form-control:not(:placeholder-shown)) .form-label {
+  top: 8px;
+  font-size: 12px;
+}
+
+.form__pass-toggle {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 12px;
+  top: 16px;
+}
+.icon-hide {
+  display: none;
+}
+
+.form__pass-toggle.is-active .icon-show {
+  display: none;
+}
+
+.form__pass-toggle.is-active .icon-hide {
+  display: inline;
+}

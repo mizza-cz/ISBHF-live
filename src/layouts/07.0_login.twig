@@ -1,5 +1,5 @@
-{% extends "@components/base/base.twig" %} {% set title = "06.0_registration" %}
-{% block main %}
+{% extends "@components/base/base.twig" %} {% set title = "07.0_login" %} {%
+block main %}
 
 <div class="bg-registration min-height-screen">
   {% include "@components/header/header-reg.twig" %}
@@ -8,12 +8,10 @@
       <div class="container">
         <div class="position-relative">
           <div class="text-center mb-6">
-            <h1 class="h2 text-light mb-4 titleDecore">
-              Create your ISBHF account
-            </h1>
+            <h1 class="h2 text-light mb-4 titleDecore">Welcome back</h1>
             <p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
-              Register to watch live matches, access replays, and follow
-              international ball hockey events.
+              Log in to access live streams, replays, and your personal watch
+              history.
             </p>
           </div>
           <div class="registration">
@@ -49,9 +47,7 @@
                   <span>Sign up with Google</span>
                 </a>
               </div>
-              <div class="registration__divider">
-                <span>or</span>
-              </div>
+              <hr />
               <form
                 class="form"
                 action="/registration"
@@ -59,46 +55,6 @@
                 novalidate
               >
                 <div class="d-flex flex-column gap-2">
-                  <div class="form-box">
-                    <label class="form-label" for="register-first-name"
-                      >Name</label
-                    >
-                    <input
-                      class="form-control"
-                      id="register-first-name"
-                      name="firstName"
-                      type="text"
-                      placeholder="Name"
-                      autocomplete="given-name"
-                      required
-                    />
-                    <p
-                      class="form__error"
-                      id="register-first-name-error"
-                      hidden
-                    ></p>
-                  </div>
-
-                  <div class="form-box">
-                    <label class="form-label" for="register-last-name"
-                      >Surname</label
-                    >
-                    <input
-                      class="form-control"
-                      id="register-last-name"
-                      name="lastName"
-                      type="text"
-                      placeholder="Surname"
-                      autocomplete="family-name"
-                      required
-                    />
-                    <p
-                      class="form__error"
-                      id="register-last-name-error"
-                      hidden
-                    ></p>
-                  </div>
-
                   <div class="form-box">
                     <label class="form-label" for="register-email"
                       >E-mail</label
@@ -149,26 +105,6 @@
                       hidden
                     ></p>
                   </div>
-
-                  <div class="form-box">
-                    <label class="form-label" for="register-password-repeat"
-                      >Repeat password</label
-                    >
-                    <input
-                      class="form-control"
-                      id="register-password-repeat"
-                      name="passwordRepeat"
-                      type="password"
-                      placeholder="Repeat password"
-                      autocomplete="new-password"
-                      required
-                    />
-                    <p
-                      class="form__error"
-                      id="register-password-repeat-error"
-                      hidden
-                    ></p>
-                  </div>
                 </div>
 
                 <button
@@ -179,8 +115,8 @@
                 </button>
               </form>
               <div class="text-md text-center text-gray-300 mt-lg-12 mt-8">
-                Already have an account?
-                <a href="#" class="d-block text-accent underline">Log in</a>
+                Don’t have an account?
+                <a href="#" class="d-block text-accent underline">Sign up</a>
               </div>
             </div>
           </div>

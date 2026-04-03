@@ -1,0 +1,46 @@
+.calendarSlider {
+  margin-bottom: 32px;
+  height: 58px;
+  .swiper-wrapper {
+    justify-content: space-between;
+  }
+  .swiper-slide {
+    width: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .swiper-btn {
+    background: rgba(#045aa3cc, 0.8);
+  }
+}
+.calendarSlider-day {
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--color-light);
+  text-align: center;
+  transition: color 0.25s ease;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  display: block;
+  width: 100%;
+  text-align: center;
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.is-current .calendarSlider-day {
+  color: var(--color-accent);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    height: 2px;
+    width: 100%;
+    background: var(--color-accent);
+  }
+}

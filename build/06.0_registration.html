@@ -148,59 +148,68 @@
 							</div>
 							<div class="registration">
 								<div class="container-xxs">
-									<div class="registration__social">
-										<button type="button" class="registration__social-button" onclick="handleAppleRegister()">
+									<div class="d-flex flex-column gap-2">
+										<a href="/auth/apple" type="button" class="registration__social">
 											<img class="object-fit-contain" src="images/ico/apple.svg" width="20" height="20" alt="apple" />
 											<span>Sign up with Apple</span>
-										</button>
+										</a>
 
-										<button type="button" class="registration__social-button" onclick="handleGoogleRegister()">
+										<a href="/auth/google" type="button" class="registration__social">
 											<img class="object-fit-contain" src="images/ico/google.svg" width="20" height="20" alt="apple" />
 											<span>Sign up with Google</span>
-										</button>
+										</a>
 									</div>
-									<div class="registration__divider">or</div>
-									<form class="registration__form" action="/registration" method="post" novalidate>
-										<div class="registration__field">
-											<label for="register-first-name">Name</label>
-											<input id="register-first-name" name="firstName" type="text" placeholder="Name" autocomplete="given-name" required />
-											<p class="registration__error" id="register-first-name-error" hidden></p>
-										</div>
-
-										<div class="registration__field">
-											<label for="register-last-name">Surname</label>
-											<input id="register-last-name" name="lastName" type="text" placeholder="Surname" autocomplete="family-name" required />
-											<p class="registration__error" id="register-last-name-error" hidden></p>
-										</div>
-
-										<div class="registration__field">
-											<label for="register-email">E-mail</label>
-											<input id="register-email" name="email" type="email" placeholder="E-mail" autocomplete="email" inputmode="email" required />
-											<p class="registration__error" id="register-email-error" hidden></p>
-										</div>
-
-										<div class="registration__field">
-											<label for="register-password">Password</label>
-											<div class="registration__password-wrap">
-												<input id="register-password" name="password" type="password" placeholder="Password" autocomplete="new-password" required />
-												<button type="button" class="registration__password-toggle" aria-label="Show password" onclick="togglePassword('register-password', this)">
-													👁
-												</button>
+									<div class="registration__divider">
+										<span>or</span>
+									</div>
+									<form class="form" action="/registration" method="post" novalidate>
+										<div class="d-flex flex-column gap-2">
+											<div class="form-box">
+												<label class="form-label" for="register-first-name">Name</label>
+												<input class="form-control" id="register-first-name" name="firstName" type="text" placeholder="Name" autocomplete="given-name" required />
+												<p class="form__error" id="register-first-name-error" hidden></p>
 											</div>
-											<p class="registration__error" id="register-password-error" hidden></p>
+
+											<div class="form-box">
+												<label class="form-label" for="register-last-name">Surname</label>
+												<input class="form-control" id="register-last-name" name="lastName" type="text" placeholder="Surname" autocomplete="family-name" required />
+												<p class="form__error" id="register-last-name-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-email">E-mail</label>
+												<input class="form-control" id="register-email" name="email" type="email" placeholder="E-mail" autocomplete="email" inputmode="email" required />
+												<p class="form__error" id="register-email-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-password">Password</label>
+												<div class="form__pass">
+													<input class="form-control" id="register-password" name="password" type="password" placeholder="Password" autocomplete="new-password" required />
+													<button type="button" class="form__pass-toggle" aria-label="Show password">
+														<span class="icon-show">
+															<img src="images/ico/eye-hidden.svg" alt="" />
+														</span>
+														<span class="icon-hide">
+															<img src="images/ico/eye-visible.svg" alt="" />
+														</span>
+													</button>
+												</div>
+												<p class="form__error" id="register-password-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-password-repeat">Repeat password</label>
+												<input class="form-control" id="register-password-repeat" name="passwordRepeat" type="password" placeholder="Repeat password" autocomplete="new-password" required />
+												<p class="form__error" id="register-password-repeat-error" hidden></p>
+											</div>
 										</div>
 
-										<div class="registration__field">
-											<label for="register-password-repeat">Repeat password</label>
-											<input id="register-password-repeat" name="passwordRepeat" type="password" placeholder="Repeat password" autocomplete="new-password" required />
-											<p class="registration__error" id="register-password-repeat-error" hidden></p>
-										</div>
-
-										<button type="submit" class="registration__submit">
+										<button type="submit" class="btn btn-primary text-dark form-submit">
 											Create account
 										</button>
 									</form>
-									<div class="text-md text-center text-gray-300 mt-lg-12 mt-10">
+									<div class="text-md text-center text-gray-300 mt-lg-12 mt-8">
 										Already have an account?
 										<a href="#" class="d-block text-accent underline">Log in</a>
 									</div>
@@ -211,36 +220,9 @@
 				</section>
 			</main>
 		</div>
-		<script>
-			function togglePassword(inputId, button) {
-				const input = document.getElementById(inputId);
-				if (!input) return;
-				const isPassword = input.type === "password";
-				input.type = isPassword ? "text" : "password";
-				button.setAttribute(
-					"aria-label",
-					isPassword ? "Hide password" : "Show password"
-				);
-			}
 
-			function handleAppleRegister() {
-				window.location.href = "/registration";
-			}
-
-			function handleGoogleRegister() {
-				window.location.href = "/registration/google/register";
-			}
-
-			function handleAppleLogin() {
-				window.location.href = "/registration/apple/login";
-			}
-
-			function handleGoogleLogin() {
-				window.location.href = "/login";
-			}
-		</script>
 		<div class="modal fade modalPromo" id="promoModal" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-dialog mt-xl-20 mt-lg-16 mt-sm-10 mt-6">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title">Add promo code</h5>

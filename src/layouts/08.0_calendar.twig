@@ -1,0 +1,82 @@
+{% extends "@components/base/base.twig" %} {% set title = "08.0_calendar" %} {%
+block main %}
+
+<div class="bg-blue-600">
+  {% include "@components/header/header.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-10 pb-lg-20 pb-10">
+      <div class="container">
+        <h1 class="h2 titleDecore text-white text-uppercase mb-7">
+          STREAMS SCHEDULE
+        </h1>
+
+        {% include "@components/calendarSlider/calendarSlider.twig" %}
+
+        <div class="row g-4">
+          {% for i in 1..6 %}
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="streamItem">
+              <div class="streamItem__img">
+                <img
+                  src="images/content/match-live-1.png"
+                  loading="lazy"
+                  alt="match"
+                />
+                <div class="btn btn-primary text-sm">Live</div>
+                <div class="streamItem__lock">
+                  <img src="images/ico/lock.svg" alt="lock" />
+                </div>
+              </div>
+              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                <li>
+                  <img
+                    src="images/content/edmont.png"
+                    width="20"
+                    height="20"
+                    class="object-fit-contain"
+                    alt=""
+                  />
+                  U20 Men’s
+                </li>
+                <li>Group B</li>
+              </ul>
+              <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+            </a>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <a href="#" class="streamItem">
+              <div class="streamItem__img">
+                <img
+                  src="images/content/match-live-2.png"
+                  loading="lazy"
+                  alt="match"
+                />
+                <div class="btn btn-primary text-sm">Live</div>
+                <div class="streamItem__lock">
+                  <img src="images/ico/lock.svg" alt="lock" />
+                </div>
+              </div>
+              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                <li>
+                  <img
+                    src="images/content/event-1.png"
+                    width="20"
+                    height="20"
+                    class="object-fit-contain"
+                    alt=""
+                  />
+                  Páňa Cup 2025
+                </li>
+                <li>Bronze</li>
+              </ul>
+              <h5 class="h5 text-light">USA vs. Slovakia</h5>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include "@components/footer/footer.twig"%}
+</div>
+{% endblock %}

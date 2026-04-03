@@ -1,3 +1,7 @@
+.modalPromo {
+  background: rgba(#0f1a20b2, 0.7) !important;
+  backdrop-filter: blur(40%);
+}
 .modalPromo .modal-content {
   background: var(--color-blue-600);
   border-radius: 16px;
@@ -79,16 +83,11 @@
     border-color: var(--color-accent);
   }
 }
-// napisano  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-/* label */
 
 .modalPromoForm-input:not(:placeholder-shown) + label,
 .modalPromoForm-input:focus ~ label {
   top: 16px;
 }
-
-/* === BUTTON === */
 
 .modalPromo .modalPromoForm-btn {
   background: var(--color-gray-300);
