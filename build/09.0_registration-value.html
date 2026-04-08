@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="cs-CZ">
+
+<head>
+	<meta charset="utf-8" />
+	<title>09.0_registration-value - ISBHF Live</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<!--****** Favicon ******-->
+	<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+	<link rel="shortcut icon" href="favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+	<link rel="manifest" href="favicon/site.webmanifest" />
+	<!--****** Fonts ******-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+	<!--****** Styles  ******-->
+	<link rel="preload" href="css/styles.css" as="style" />
+	<link rel="stylesheet" media="screen, handheld" href="css/styles.css" />
+	<link rel="stylesheet" media="print" href="css/prints.css" />
+	<!--****** Styles  ******-->
+
+	<!--****** Scripts  ******-->
+	<link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script" crossorigin />
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" as="script" crossorigin />
+	<link rel="preload" href="js/scripts.js" as="script" />
+	<!-- ****** scripts ****** -->
+</head>
+
+<body>
+	<div class="base">
+
+		<div class="bg-registration min-height-screen">
+			<header class="header">
+				<div class="container">
+					<div class="header__inner">
+						<a href="/" class="header__logo">
+							<img src="images/ico/logo.svg" alt="logo" />
+						</a>
+
+						<nav class="collapse navbar-collapse" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="events" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Events
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="events">
+										<li><a class="dropdown-item" href="#">event 1</a></li>
+										<li><a class="dropdown-item" href="#">event 2</a></li>
+										<li>
+											<a class="dropdown-item" href="#">event 3 </a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Schedule
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="members">
+										<li><a class="dropdown-item" href="#">Schedule</a></li>
+										<li><a class="dropdown-item" href="#">Schedule</a></li>
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link" href="#"> FAQ </a>
+								</li>
+							</ul>
+
+							<div class="d-md-none d-block mx-auto">
+								<details class="header-login">
+									<summary class="btn btn-stroke">
+										<div class="d-flex gap-2 align-items-center">
+											<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
+											</svg> JM
+										</div>
+										<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</summary>
+									<ul class="header-login__list">
+										<li>
+											<a href="#">Profile</a>
+										</li>
+										<li>
+											<a href="#">Settings</a>
+										</li>
+										<li>
+											<a href="#">Log out</a>
+										</li>
+									</ul>
+								</details>
+							</div>
+						</nav>
+						<div class="d-flex align-items-center gap-3">
+							<a href="#" class="iconBtn">
+								<img src="images/ico/search.svg" alt="menu" />
+							</a>
+
+							<div class="d-md-block d-none">
+								<details class="header-login">
+									<summary class="btn btn-stroke">
+										<div class="d-flex gap-2 align-items-center">
+											<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
+											</svg> JM
+										</div>
+										<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</summary>
+									<ul class="header-login__list">
+										<li>
+											<a href="#">Profile</a>
+										</li>
+										<li>
+											<a href="#">Settings</a>
+										</li>
+										<li>
+											<a href="#">Log out</a>
+										</li>
+									</ul>
+								</details>
+							</div>
+							<button class="c-header__opener js-header__opener" type="button">
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main" aria-label="Hlavní obsah">
+				<section class="pt-lg-16 pt-10 pb-lg-20 pb-10">
+					<div class="container">
+						<div class="position-relative">
+							<div class="text-center mb-6">
+								<h1 class="h2 text-light mb-4 titleDecore">
+									Create your ISBHF account
+								</h1>
+								<p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
+									Register to watch live matches, access replays, and follow
+									international ball hockey events.
+								</p>
+							</div>
+							<div class="registration">
+								<div class="container-xxs">
+									<div class="d-flex flex-column gap-2">
+										<a href="/auth/apple" type="button" class="registration__social">
+											<img class="object-fit-contain" src="images/ico/apple.svg" width="20" height="20" alt="apple" />
+											<span>Sign up with Apple</span>
+										</a>
+
+										<a href="/auth/google" type="button" class="registration__social">
+											<img class="object-fit-contain" src="images/ico/google.svg" width="20" height="20" alt="google" />
+											<span>Sign up with Google</span>
+										</a>
+									</div>
+
+									<div class="registration__divider">
+										<span>or</span>
+									</div>
+
+									<form class="form" action="/registration" method="post" novalidate>
+										<div class="d-flex flex-column gap-2">
+											<div class="form-box">
+												<label class="form-label" for="register-first-name">Name</label>
+												<input class="form-control" id="register-first-name" name="firstName" type="text" placeholder="Name" autocomplete="given-name" value="Joseph" required />
+												<p class="form__error" id="register-first-name-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-last-name">Surname</label>
+												<input class="form-control" id="register-last-name" name="lastName" type="text" placeholder="Surname" autocomplete="family-name" value="McCartney" required />
+												<p class="form__error" id="register-last-name-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-email">E-mail</label>
+												<input class="form-control" id="register-email" name="email" type="email" placeholder="E-mail" autocomplete="email" inputmode="email" value="McCartney@isbhf.com" required />
+												<p class="form__error" id="register-email-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-password">Password</label>
+												<div class="form__pass">
+													<input class="form-control" id="register-password" name="password" type="password" placeholder="Password" autocomplete="new-password" value="123456789" required />
+													<button type="button" class="form__pass-toggle" aria-label="Toggle password visibility">
+														<span class="icon-show">
+															<img src="images/ico/eye-hidden.svg" alt="" />
+														</span>
+														<span class="icon-hide">
+															<img src="images/ico/eye-visible.svg" alt="" />
+														</span>
+													</button>
+												</div>
+												<p class="form__error" id="register-password-error" hidden></p>
+											</div>
+
+											<div class="form-box">
+												<label class="form-label" for="register-password-repeat">Repeat password</label>
+												<input class="form-control" id="register-password-repeat" name="passwordRepeat" type="password" placeholder="Repeat password" autocomplete="new-password" value="123456789" required />
+												<p class="form__error" id="register-password-repeat-error" hidden></p>
+											</div>
+										</div>
+
+										<button type="submit" class="btn btn-primary text-dark form-submit">
+											Create account
+										</button>
+									</form>
+
+									<div class="text-md text-center text-gray-300 mt-lg-12 mt-8">
+										Already have an account?
+										<a href="#" class="d-block text-accent underline">Log in</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+
+		<div class="modal fade modalPromo" id="promoModal" tabindex="-1">
+			<div class="modal-dialog mt-xl-20 mt-lg-16 mt-sm-10 mt-6">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Add promo code</h5>
+						<button type="button" class="modal-close" data-bs-dismiss="modal">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.683 13.516l11.09-11.09M2.554 2.663l11.09 11.09" stroke="#FAFAFA" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
+							</svg> </button>
+					</div>
+
+					<div class="modal-body">
+						<form class="modalPromoForm">
+							<!-- <div class="modalPromoForm-box">
+            <input
+              type="text"
+              class="modalPromoForm-input"
+              id="promoCode"
+              placeholder="Promo code"
+            />
+            <label class="modalPromoForm-label" for="promoCode"
+              >Promo code</label
+            >
+          </div> -->
+							<div class="modalPromoForm-box error">
+								<input type="text" class="modalPromoForm-input" id="promoCode" placeholder="Promo code" value="ISBHF" />
+								<label class="modalPromoForm-label" for="promoCode">
+									Promo code
+								</label>
+
+								<div class="modalPromoForm-error">
+									Invalid promo code. Please try again.
+								</div>
+							</div>
+
+							<button type="submit" class="btn modalPromoForm-btn">Add</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--not valid  -->
+	</div>
+	<script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script defer src="js/scripts.js"></script>
+</body>
+
+</html>

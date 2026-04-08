@@ -1,0 +1,201 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"09.0_registration-value" %} {% block main %}
+
+<div class="bg-registration min-height-screen">
+  {% include "@components/header/header-reg.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-lg-16 pt-10 pb-lg-20 pb-10">
+      <div class="container">
+        <div class="position-relative">
+          <div class="text-center mb-6">
+            <h1 class="h2 text-light mb-4 titleDecore">
+              Create your ISBHF account
+            </h1>
+            <p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
+              Register to watch live matches, access replays, and follow
+              international ball hockey events.
+            </p>
+          </div>
+          <div class="registration">
+            <div class="container-xxs">
+              <div class="d-flex flex-column gap-2">
+                <a
+                  href="/auth/apple"
+                  type="button"
+                  class="registration__social"
+                >
+                  <img
+                    class="object-fit-contain"
+                    src="images/ico/apple.svg"
+                    width="20"
+                    height="20"
+                    alt="apple"
+                  />
+                  <span>Sign up with Apple</span>
+                </a>
+
+                <a
+                  href="/auth/google"
+                  type="button"
+                  class="registration__social"
+                >
+                  <img
+                    class="object-fit-contain"
+                    src="images/ico/google.svg"
+                    width="20"
+                    height="20"
+                    alt="google"
+                  />
+                  <span>Sign up with Google</span>
+                </a>
+              </div>
+
+              <div class="registration__divider">
+                <span>or</span>
+              </div>
+
+              <form
+                class="form"
+                action="/registration"
+                method="post"
+                novalidate
+              >
+                <div class="d-flex flex-column gap-2">
+                  <div class="form-box">
+                    <label class="form-label" for="register-first-name"
+                      >Name</label
+                    >
+                    <input
+                      class="form-control"
+                      id="register-first-name"
+                      name="firstName"
+                      type="text"
+                      placeholder="Name"
+                      autocomplete="given-name"
+                      value="Joseph"
+                      required
+                    />
+                    <p
+                      class="form__error"
+                      id="register-first-name-error"
+                      hidden
+                    ></p>
+                  </div>
+
+                  <div class="form-box">
+                    <label class="form-label" for="register-last-name"
+                      >Surname</label
+                    >
+                    <input
+                      class="form-control"
+                      id="register-last-name"
+                      name="lastName"
+                      type="text"
+                      placeholder="Surname"
+                      autocomplete="family-name"
+                      value="McCartney"
+                      required
+                    />
+                    <p
+                      class="form__error"
+                      id="register-last-name-error"
+                      hidden
+                    ></p>
+                  </div>
+
+                  <div class="form-box">
+                    <label class="form-label" for="register-email"
+                      >E-mail</label
+                    >
+                    <input
+                      class="form-control"
+                      id="register-email"
+                      name="email"
+                      type="email"
+                      placeholder="E-mail"
+                      autocomplete="email"
+                      inputmode="email"
+                      value="McCartney@isbhf.com"
+                      required
+                    />
+                    <p class="form__error" id="register-email-error" hidden></p>
+                  </div>
+
+                  <div class="form-box">
+                    <label class="form-label" for="register-password"
+                      >Password</label
+                    >
+                    <div class="form__pass">
+                      <input
+                        class="form-control"
+                        id="register-password"
+                        name="password"
+                        type="password"
+                        placeholder="Password"
+                        autocomplete="new-password"
+                        value="123456789"
+                        required
+                      />
+                      <button
+                        type="button"
+                        class="form__pass-toggle"
+                        aria-label="Toggle password visibility"
+                      >
+                        <span class="icon-show">
+                          <img src="images/ico/eye-hidden.svg" alt="" />
+                        </span>
+                        <span class="icon-hide">
+                          <img src="images/ico/eye-visible.svg" alt="" />
+                        </span>
+                      </button>
+                    </div>
+                    <p
+                      class="form__error"
+                      id="register-password-error"
+                      hidden
+                    ></p>
+                  </div>
+
+                  <div class="form-box">
+                    <label class="form-label" for="register-password-repeat"
+                      >Repeat password</label
+                    >
+                    <input
+                      class="form-control"
+                      id="register-password-repeat"
+                      name="passwordRepeat"
+                      type="password"
+                      placeholder="Repeat password"
+                      autocomplete="new-password"
+                      value="123456789"
+                      required
+                    />
+                    <p
+                      class="form__error"
+                      id="register-password-repeat-error"
+                      hidden
+                    ></p>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary text-dark form-submit"
+                >
+                  Create account
+                </button>
+              </form>
+
+              <div class="text-md text-center text-gray-300 mt-lg-12 mt-8">
+                Already have an account?
+                <a href="#" class="d-block text-accent underline">Log in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+{% include "@components/modalPromo/modalPromo.twig"%} {% endblock %}

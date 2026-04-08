@@ -27,6 +27,7 @@
     outline: none;
     transition: background 0.25s ease;
     padding-top: 18px;
+    caret-color: var(--color-accent);
     &::placeholder {
       font-size: 0;
     }

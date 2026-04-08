@@ -45,6 +45,9 @@
   path {
     fill: var(--color-light);
   }
+  &:active,
+  &:focus,
+  &:focus-visible,
   &:hover {
     background-color: var(--color-accent);
     border-color: var(--color-accent);

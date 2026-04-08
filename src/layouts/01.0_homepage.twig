@@ -20,7 +20,12 @@ block main %}
         <div class="row g-4">
           {% for i in 1..2 %}
           <div class="col-xl-3 col-sm-6">
-            <a href="#" class="streamItem">
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#modalStreamDetail"
+              href="#"
+              class="streamItem"
+            >
               <div class="streamItem__img">
                 <img
                   src="images/content/match-live-1.png"
@@ -49,7 +54,12 @@ block main %}
             </a>
           </div>
           <div class="col-xl-3 col-sm-6">
-            <a href="#" class="streamItem">
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#modalStreamDetail"
+              href="#"
+              class="streamItem"
+            >
               <div class="streamItem__img">
                 <img
                   src="images/content/match-live-2.png"
@@ -276,7 +286,12 @@ block main %}
         <div class="row g-3 mb-10">
           {% for i in 1..2 %}
           <div class="col-xl-3 col-sm-6">
-            <a href="#" class="streamItem">
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#modalStreamDetail"
+              href="#"
+              class="streamItem"
+            >
               <div class="streamItem__img">
                 <img
                   src="images/content/match-live-1.png"
@@ -305,7 +320,12 @@ block main %}
             </a>
           </div>
           <div class="col-xl-3 col-sm-6">
-            <a href="#" class="streamItem">
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#modalStreamDetail"
+              href="#"
+              class="streamItem"
+            >
               <div class="streamItem__img">
                 <img
                   src="images/content/match-live-2.png"
@@ -342,5 +362,4 @@ block main %}
   </main>
   {% include "@components/footer/footer.twig" %}
 </div>
-
-{% endblock %}
+{% include "@components/streamDetail/streamDetail.twig" %} {% endblock %}
