@@ -84,6 +84,12 @@
   .btn {
     position: relative;
     z-index: 5;
+    @include media-breakpoint-down(sm) {
+      font-size: 0.875rem;
+      line-height: 130%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
   &__logo {
     height: auto;
