@@ -1,59 +1,134 @@
-// const calendarSlider = document.querySelector(".calendarSlider");
+$(function () {
+  let $slider = $(".calendarSlider");
+  let $wrapper = $slider.find(".swiper-wrapper");
 
-// if (calendarSlider) {
-//   const swiper = new Swiper(calendarSlider, {
-//     slidesPerView: "auto",
-//     spaceBetween: 48,
-//     loop: true,
+  let daysBefore = 20;
+  let daysAfter = 20;
 
-//     navigation: {
-//       nextEl: ".next",
-//       prevEl: ".prev",
-//     },
-//   });
-// }
-// const calendarSlider = document.querySelector(".calendarSlider");
-// if (!calendarSlider) return;
+  let baseUrl = window.location.pathname;
 
-// const swiper = new Swiper(calendarSlider, {
-//   slidesPerView: "auto",
-//   spaceBetween: 48,
-//   loop: true,
-//   centeredSlides: true,
-//   slideToClickedSlide: true,
+  function pad(num) {
+    return String(num).padStart(2, "0");
+  }
 
-//   navigation: {
-//     nextEl: ".next",
-//     prevEl: ".prev",
-//   },
+  function toIsoDate(date) {
+    return (
+      date.getFullYear() +
+      "-" +
+      pad(date.getMonth() + 1) +
+      "-" +
+      pad(date.getDate())
+    );
+  }
 
-//   on: {
-//     init: function () {
-//       const currentSlide = calendarSlider.querySelector(
-//         ".swiper-slide.is-current"
-//       );
+  function normalizeDate(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  }
 
-//       if (!currentSlide) return;
+  function getDayDiff(a, b) {
+    let ms = 24 * 60 * 60 * 1000;
+    return Math.round((normalizeDate(a) - normalizeDate(b)) / ms);
+  }
 
-//       const index = currentSlide.getAttribute("data-swiper-slide-index");
+  function getLabel(date, today) {
+    let diff = getDayDiff(date, today);
 
-//       if (index !== null) {
-//         this.slideToLoop(Number(index), 0);
-//       }
-//     },
-//   },
-// });
+    if (diff === -1) return "Yesterday";
+    if (diff === 0) return "Today";
+    if (diff === 1) return "Tomorrow";
 
-// calendarSlider.addEventListener("click", function (e) {
-//   const slide = e.target.closest(".swiper-slide");
-//   if (!slide) return;
+    return date.getDate() + ". " + (date.getMonth() + 1) + ".";
+  }
 
-//   e.preventDefault();
+  function buildDayUrl(dateStr) {
+    return baseUrl + "?date=" + encodeURIComponent(dateStr);
 
-//   calendarSlider
-//     .querySelectorAll(".swiper-slide")
-//     .forEach((el) => el.classList.remove("is-current"));
+    // change url
+    // return '/streams-schedule/' + dateStr;
+  }
 
-//   slide.classList.add("is-current");
+  function getSelectedDateFromUrl() {
+    let params = new URLSearchParams(window.location.search);
+    return params.get("date");
+  }
 
-// });
+  function buildSlides() {
+    let today = new Date();
+    let selectedDate = getSelectedDateFromUrl() || toIsoDate(today);
+    let html = "";
+    let selectedIndex = 0;
+    let slideIndex = 0;
+
+    for (let i = -daysBefore; i <= daysAfter; i++) {
+      let date = new Date(today);
+      date.setDate(today.getDate() + i);
+
+      let isoDate = toIsoDate(date);
+      let label = getLabel(date, today);
+      let href = buildDayUrl(isoDate);
+      let isActive = isoDate === selectedDate;
+
+      if (isActive) {
+        selectedIndex = slideIndex;
+      }
+
+      html += `
+        <li class="swiper-slide">
+          <a
+            href="${href}"
+            class="calendarSlider-day${isActive ? " is-active" : ""}"
+            data-date="${isoDate}"
+          >
+            ${label}
+          </a>
+        </li>
+      `;
+
+      slideIndex++;
+    }
+
+    $wrapper.html(html);
+
+    return selectedIndex;
+  }
+
+  let initialIndex = buildSlides();
+
+  let swiper = new Swiper(".calendarSlider", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    initialSlide: initialIndex,
+    loop: false,
+    spaceBetween: 48,
+    navigation: {
+      nextEl: ".calendarSlider .next",
+      prevEl: ".calendarSlider .prev",
+    },
+    on: {
+      init: function () {
+        this.slideTo(initialIndex, 0);
+      },
+    },
+  });
+
+  //  AJAX
+
+  /*
+  $slider.on('click', '.calendarSlider-day', function (e) {
+    e.preventDefault();
+
+    let $link = $(this);
+    let url = $link.attr('href');
+
+    $slider.find('.calendarSlider-day').removeClass('is-active');
+    $link.addClass('is-active');
+
+    swiper.slideTo($link.closest('.swiper-slide').index());
+
+    $.get(url, function (response) {
+      $('.eventsContainer').html(response);
+      window.history.replaceState({}, '', url);
+    });
+  });
+  */
+});

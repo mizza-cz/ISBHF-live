@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
   .swiper-btn {
     background: rgba(#045aa3cc, 0.8);
@@ -32,15 +33,19 @@
   }
 }
 
-.is-current .calendarSlider-day {
+.swiper-slide.swiper-slide-active .calendarSlider-day {
   color: var(--color-accent);
   position: relative;
+  font-weight: 600;
   &::before {
     content: "";
     position: absolute;
     bottom: -14px;
     height: 2px;
     width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     background: var(--color-accent);
   }
 }
