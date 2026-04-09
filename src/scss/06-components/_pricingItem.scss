@@ -53,3 +53,16 @@
     transition: all 0.25s;
   }
 }
+
+.pricingItem__popular {
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-light);
+  padding: 4px 10px;
+  height: 24px;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
