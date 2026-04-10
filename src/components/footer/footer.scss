@@ -17,7 +17,7 @@
     }
   }
   &-bottom {
-    border-top: 1px solid var(--color-blue-300);
+    border-top: 2px solid rgba(#7cb0db, 0.32);
     padding-top: 28px;
     margin-top: 28px;
     display: flex;
@@ -45,7 +45,7 @@
     margin-bottom: 28px;
     a {
       display: block;
-      width: 24px;
+      max-width: 34px;
       height: 24px;
       svg,
       img {
@@ -62,8 +62,10 @@
     }
   }
   &__list {
+    font-size: 12px;
+    line-height: 20px;
     li {
-      margin-top: 12px;
+      margin-top: 8px;
     }
     a {
       text-decoration-color: transparent;

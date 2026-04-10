@@ -19,7 +19,7 @@
   }
   ul {
     margin: 20px 0;
-    color: var(--color-blue-600);
+    color: var(--color-light);
     > li {
       position: relative;
       padding-left: 16px;
@@ -46,7 +46,7 @@
   ol {
     margin: 20px 0;
     counter-reset: item;
-    color: var(--color-blue-600);
+    color: var(--color-light);
     > li {
       counter-increment: item;
       position: relative;
@@ -54,7 +54,7 @@
       margin-bottom: 8px;
       &::before {
         content: counter(item) ")";
-        color: var(--color-accent);
+        color: var(--color-light);
         font-weight: 500;
         position: absolute;
         top: 0;
@@ -71,11 +71,11 @@
     }
   }
   h3 {
-    color: var(--color-blue-700);
+    color: var(--color-light);
     margin-bottom: 20px;
   }
   p {
-    color: var(--color-blue-600);
+    color: var(--color-light);
   }
 }
 

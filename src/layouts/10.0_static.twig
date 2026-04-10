@@ -1,0 +1,86 @@
+{% extends "@components/base/base.twig" %} {% set title = "10.0_static" %} {%
+block main %}
+<div class="bg-blue-600">
+  {% include "@components/header/header.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-10 pb-lg-20 pb-10">
+      <div class="container-fluid">
+        <h1 class="h2 titleDecore text-white text-uppercase mb-6">
+          Static Page
+        </h1>
+        <div class="o-content">
+          <p>
+            Hokej, to nie je len obľúbený zimný šport, ale aj zábavný a
+            adrenalinom nabitý zážitok pre hráčov aj fanúšikov. Na ľade sa
+            odohrávajú nielen rýchle a taktické zápasy, ale tiež sa tu premieta
+            sila tímovej spolupráce a individuálnej brilancie. Hoci hokej má
+            svoje korene v ďalekej minulosti, stále si udržiava svoju jedinečnú
+            príťažlivosť a popularitu.
+          </p>
+          <div class="text-sm text-accent mb-4 mt-10">Historie</div>
+          <h3>Hráčska brilancia a vášeň pre hokej</h3>
+          <ul>
+            <li>Na výsadbu tak půjde jeden milion korun</li>
+            <li>Na výsadbu tak půjde</li>
+            <li>Na výsadbu tak půjde jeden milion korun</li>
+            <li>Na výsadbu tak půjde</li>
+            <li>Na výsadbu tak půjde jeden milion korun</li>
+            <li>Na výsadbu tak půjde</li>
+          </ul>
+          <div class="text-sm text-accent mb-4 mt-10">Hráči</div>
+          <h3>Hráčska brilancia a vášeň pre hokej</h3>
+          <p>
+            Hokej sa môže pyšniť hviezdami, ktoré svojou brilanciou a
+            zručnosťami dokážu ohromiť nielen fanúšikov, ale aj odborníkov.
+            Spôsob, akým hráči dokážu ovládať puk, vykonávať rôzne finty a
+            strieľať presné strely, je fascinujúci. Každý hráč má svoj jedinečný
+            štýl a prístup k hre, čo hokej činí taký rozmanitý a neustále sa
+            vyvíjajúci.
+          </p>
+
+          <ol>
+            <li>Na výsadbu tak půjde jeden milion korun</li>
+            <li>Na výsadbu tak půjde</li>
+            <li>Na výsadbu tak půjde jeden milion korun</li>
+            <li>Na výsadbu tak půjde</li>
+            <li>Na výsadbu tak půjde jeden milion korun</li>
+            <li>Na výsadbu tak půjde</li>
+          </ol>
+          <p>
+            Hokejoví fanúšikovia sú srdcervúcou súčasťou tejto hry. Ich vášeň,
+            podpora a oddanosť tímu sú nezabudnuteľné. Hráči na ľade cítia
+            energiu fanúšikov a tá im dodáva silu a motiváciu vydať zo seba
+            maximum. Atmosféra na štadiónoch je nákazlivá a dodáva hre špeciálnu
+            čar.
+          </p>
+          <img
+            srcset="https://picsum.photos/1472/1178"
+            class="my-10 rounded-3 mx-auto"
+            alt=""
+          />
+          <div class="text-sm text-accent mb-4 mt-10">Hráči</div>
+          <h3>Hráčska brilancia a vášeň pre hokej</h3>
+          <p>
+            Hokej sa môže pyšniť hviezdami, ktoré svojou brilanciou a
+            zručnosťami dokážu ohromiť nielen fanúšikov, ale aj odborníkov.
+            Spôsob, akým hráči dokážu ovládať puk, vykonávať rôzne finty a
+            strieľať presné strely, je fascinujúci. Každý hráč má svoj jedinečný
+            štýl a prístup k hre, čo hokej činí taký rozmanitý a neustále sa
+            vyvíjajúci.
+          </p>
+          <p>
+            Hokejoví fanúšikovia sú srdcervúcou súčasťou tejto hry. Ich vášeň,
+            podpora a oddanosť tímu sú nezabudnuteľné. Hráči na ľade cítia
+            energiu fanúšikov a tá im dodáva silu a motiváciu vydať zo seba
+            maximum. Atmosféra na štadiónoch je nákazlivá a dodáva hre špeciálnu
+            čar.
+          </p>
+        </div>
+      </div>
+    </section>
+    {% include "@components/partnersSlider/partnersSlider.twig" %}
+  </main>
+  {% include "@components/footer/footer.twig"%}
+</div>
+
+{% endblock %}
