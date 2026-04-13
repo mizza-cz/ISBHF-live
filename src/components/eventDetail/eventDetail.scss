@@ -1,0 +1,81 @@
+.eventDetail {
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(#7cb0db, 0.32) !important;
+    margin-bottom: 24px;
+    gap: 32px 24px;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      padding-bottom: 24px;
+    }
+  }
+  &__content {
+    max-width: 820px;
+    padding-top: 1rem;
+  }
+  &__logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+  &__app {
+    max-width: 320px;
+    height: 364px;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: block;
+    min-width: 320px;
+    @include media-breakpoint-down(md) {
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.eventDetail-slider {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(#7cb0db, 0.32) !important;
+  overflow: visible;
+  @include media-breakpoint-down(xxl) {
+    overflow: hidden;
+  }
+  .swiper-btn {
+    background: var(--color-pink);
+  }
+  .swiper-btn.next {
+    right: -3rem;
+    @include media-breakpoint-down(xxl) {
+      right: 0.5rem;
+    }
+  }
+  .swiper-btn.prev {
+    left: -3rem;
+    @include media-breakpoint-down(xxl) {
+      left: 0.5rem;
+    }
+  }
+}
+
+.eventDetail-bg {
+  position: relative;
+  background: var(--color-blue-600);
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../images/content/eventDetail-bg.png") no-repeat center /
+      cover;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}

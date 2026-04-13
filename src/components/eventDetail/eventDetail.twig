@@ -1,0 +1,231 @@
+<section class="eventDetail pt-6 pb-lg-20 pb-10">
+  <div class="container">
+    <div class="eventDetail__inner">
+      <div class="eventDetail__content">
+        <img
+          class="eventDetail__logo"
+          src="images/content/event-2.png"
+          alt="event"
+        />
+
+        <ul
+          class="text-gray-300 text-md d-flex align-items-center gap-2 flex-wrap mb-2"
+        >
+          <li>23. 2. 2025 – 30. 3. 2025</li>
+          <li>•</li>
+          <li>Bermuda, United States</li>
+          <li>•</li>
+          <li>Men</li>
+        </ul>
+        <h1 class="h2 text-light mb-2">
+          ISBHF MASTERS World Championship Bermuda
+        </h1>
+        <p class="text-md text-gray-300 mb-6">
+          Hockey is not just a popular winter sport; it’s an exhilarating and
+          adrenaline-pumping experience for both players and fans. On the ice,
+          fast-paced and strategic matches unfold, showcasing the power of
+          teamwork and individual skills. Despite its historical roots, hockey
+          continues to maintain its unique charm and popularity.
+        </p>
+        <details>
+          <summary class="streamDetail-top__more">More</summary>
+          <p class="text-md text-gray-300 mb-6">
+            Hockey is not just a popular winter sport; it’s an exhilarating and
+            adrenaline-pumping experience for both players and fans. On the ice,
+            fast-paced and strategic matches unfold, showcasing the power of
+            teamwork and individual skills. Despite its historical roots, hockey
+            continues to maintain its unique charm and popularity.
+          </p>
+        </details>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn-accent btn">
+            {% include "@images/lock.svg" %} Get access
+          </a>
+          <a href="#" class="streamDetail-top__stats">
+            {% include "@images/stats.svg" %}
+          </a>
+          <a href="#" class="streamDetail-top__star">
+            {% include "@images/star.svg" %}
+          </a>
+        </div>
+      </div>
+
+      <a href="#" target="_blank" class="eventDetail__app">
+        <img
+          src="images/content/app-ban.png"
+          loading="lazy"
+          alt="app promotion"
+        />
+      </a>
+    </div>
+
+    <!-- /// events -->
+    <h2 class="h2 text-white mb-6">Live now</h2>
+    <div class="swiper eventDetail-slider">
+      <button class="swiper-btn prev" aria-label="Previous">
+        {% include "@images/chevron-down.svg" %}
+      </button>
+      <ul role="list" class="swiper-wrapper infinite-scroll-swiper">
+        {% for i in 1..10 %}
+        <li class="swiper-slide">
+          <a href="#" class="streamItem">
+            <div class="streamItem__img">
+              <img
+                src="images/content/match-live-1.png"
+                loading="lazy"
+                alt="match"
+              />
+              <div class="btn btn-primary text-sm">Live</div>
+              <div class="streamItem__lock">
+                <img src="images/ico/lock.svg" alt="lock" />
+              </div>
+            </div>
+            <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+              <li>
+                <img
+                  src="images/content/edmont.png"
+                  width="20"
+                  height="20"
+                  class="object-fit-contain"
+                  alt=""
+                />
+                U20 Men’s
+              </li>
+              <li>Group B</li>
+            </ul>
+            <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+          </a>
+        </li>
+
+        {% endfor %}
+      </ul>
+      <button class="swiper-btn next" aria-label="Previous">
+        {% include "@images/chevron-down.svg" %}
+      </button>
+    </div>
+    <h2 class="h2 text-white mb-6">Next</h2>
+    <div class="swiper eventDetail-slider">
+      <button class="swiper-btn prev" aria-label="Previous">
+        {% include "@images/chevron-down.svg" %}
+      </button>
+      <ul role="list" class="swiper-wrapper infinite-scroll-swiper">
+        {% for i in 1..10 %}
+        <li class="swiper-slide">
+          <a href="#" class="streamItem">
+            <div class="streamItem__img">
+              <img
+                src="images/content/match-live-1.png"
+                loading="lazy"
+                alt="match"
+              />
+              <div class="btn btn-primary text-sm">Live</div>
+              <div class="streamItem__lock">
+                <img src="images/ico/lock.svg" alt="lock" />
+              </div>
+            </div>
+            <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+              <li>
+                <img
+                  src="images/content/edmont.png"
+                  width="20"
+                  height="20"
+                  class="object-fit-contain"
+                  alt=""
+                />
+                U20 Men’s
+              </li>
+              <li>Group B</li>
+            </ul>
+            <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+          </a>
+        </li>
+
+        {% endfor %}
+      </ul>
+      <button class="swiper-btn next" aria-label="Previous">
+        {% include "@images/chevron-down.svg" %}
+      </button>
+    </div>
+    <div
+      class="d-flex mb-6 justify-content-between align-items-center gap-3 flex-wrap"
+    >
+      <h2 class="h2 text-white">Full replays</h2>
+      <form class="d-flex align-items-center gap-4">
+        <select class="js-select" name="filterGroup" id="filterGroup">
+          <option selected>Filter</option>
+          <option>Group A</option>
+          <option>Group B</option>
+          <option>QF</option>
+          <option>Final</option>
+        </select>
+        <select class="js-select" name="filterSort" id="filterSort">
+          <option selected>Sorting</option>
+          <option>Newest first</option>
+          <option>Oldest first</option>
+        </select>
+      </form>
+    </div>
+    <div class="row g-4">
+      {% for i in 1..6 %}
+      <div class="col-xl-3 col-sm-6">
+        <a href="#" class="streamItem">
+          <div class="streamItem__img">
+            <img
+              src="images/content/match-live-1.png"
+              loading="lazy"
+              alt="match"
+            />
+            <div class="btn btn-primary text-sm">Live</div>
+            <div class="streamItem__lock">
+              <img src="images/ico/lock.svg" alt="lock" />
+            </div>
+          </div>
+          <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+            <li>
+              <img
+                src="images/content/edmont.png"
+                width="20"
+                height="20"
+                class="object-fit-contain"
+                alt=""
+              />
+              U20 Men’s
+            </li>
+            <li>Group B</li>
+          </ul>
+          <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+        </a>
+      </div>
+      <div class="col-xl-3 col-sm-6">
+        <a href="#" class="streamItem">
+          <div class="streamItem__img">
+            <img
+              src="images/content/match-live-2.png"
+              loading="lazy"
+              alt="match"
+            />
+            <div class="btn btn-primary text-sm">Live</div>
+            <div class="streamItem__lock">
+              <img src="images/ico/lock.svg" alt="lock" />
+            </div>
+          </div>
+          <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+            <li>
+              <img
+                src="images/content/event-1.png"
+                width="20"
+                height="20"
+                class="object-fit-contain"
+                alt=""
+              />
+              Páňa Cup 2025
+            </li>
+            <li>Bronze</li>
+          </ul>
+          <h5 class="h5 text-light">USA vs. Slovakia</h5>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
