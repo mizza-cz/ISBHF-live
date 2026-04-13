@@ -1,0 +1,163 @@
+<section class="profile">
+  <div class="d-flex justify-content-between align-items-start mb-6">
+    <h2 class="h2 text-white">Plan</h2>
+
+    <button
+      data-bs-toggle="modal"
+      data-bs-target="#promoModal"
+      class="btn btn-stroke btn-sm text-white"
+    >
+      Add promo code
+    </button>
+  </div>
+
+  <div class="profileCard mb-6">
+    <div class="d-flex justify-content-between align-items-center gap-3 mb-2">
+      <h3 class="h3 text-light">Standard</h3>
+      <span class="badge">Active</span>
+    </div>
+
+    <div
+      class="border-bottom-1 mb-4 pb-4 d-flex flex-column gap-2 text-md text-gray-300"
+    >
+      <span>Your plan</span>
+      <span>Started: Dec 2, 2025</span>
+    </div>
+
+    <div
+      class="text-md text-gray-300 d-flex align-items-center gap-2 border-bottom-1 mb-4 pb-4"
+    >
+      <span class="text-white">€5,99</span>
+      per month
+    </div>
+
+    <div class="d-flex flex-wrap gap-6 align-items-center">
+      <button class="btn btn-accent btn-sm">Upgrade</button>
+      <button class="profile-cancel">Cancel subscription</button>
+    </div>
+  </div>
+
+  <div class="profileCard">
+    <h2 class="h3 text-light mb-6">Payment details</h2>
+
+    <div class="profilePayment">
+      <div class="profilePayment-item">
+        <div class="profilePayment-card">
+          <div class="d-flex gap-md-4 gap-3 align-items-center">
+            <img
+              class="object-fit-contain"
+              src="images/ico/mastercard.svg"
+              width="36"
+              height="24"
+              alt="mastercard"
+            />
+            <div
+              class="profilePayment-number"
+              aria-label="Card number ending in 7863"
+            >
+              <div class="profilePayment-number__masked" aria-hidden="true">
+                <span>••••</span>
+                <span>••••</span>
+                <span>••••</span>
+              </div>
+              <span class="text-md text-white">7863</span>
+            </div>
+          </div>
+          <div class="text-md text-gray-300">Card number</div>
+        </div>
+
+        <div class="profilePayment-expiry">
+          <div class="text-white text-md">06 / 2028</div>
+          <div class="text-gray-300 text-md">Expiration date</div>
+        </div>
+        <div class="profilePayment-action">
+          <button class="btn btn-stroke btn-sm text-white">Edit</button>
+        </div>
+      </div>
+      <div class="profilePayment-item">
+        <div class="profilePayment-card">
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex gap-md-4 gap-3 align-items-center">
+              <img
+                class="object-fit-contain"
+                src="images/ico/visa.svg"
+                width="36"
+                height="24"
+                alt="mastercard"
+              />
+              <div
+                class="profilePayment-number"
+                aria-label="Card number ending in 7863"
+              >
+                <div class="profilePayment-number__masked" aria-hidden="true">
+                  <span>••••</span>
+                  <span>••••</span>
+                  <span>••••</span>
+                </div>
+                <span class="text-md text-white">9145</span>
+              </div>
+            </div>
+            <div class="text-md text-gray-300">Card number</div>
+          </div>
+        </div>
+
+        <div class="profilePayment-expiry">
+          <div class="text-white text-md">12 / 2035</div>
+          <div class="text-gray-300 text-md">Expiration date</div>
+        </div>
+        <div class="profilePayment-action">
+          <button class="btn btn-stroke btn-sm text-white">Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-stroke btn-sm text-white mt-4">Add new card</button>
+  </div>
+
+  <hr class="my-lg-10 my-8" />
+
+  <h2 class="h2 text-white mb-6">Security</h2>
+
+  <div class="profileCard mb-6">
+    <div
+      class="d-flex align-items-center justify-content-between gap-4 flex-wrap"
+    >
+      <div class="d-flex flex-column gap-2">
+        <h4 class="h3 text-light">Password</h4>
+        <div class="text-md text-gray-300">Change your account password</div>
+      </div>
+      <button class="btn btn-stroke btn-sm text-white">Edit</button>
+    </div>
+  </div>
+  <div class="profileCard mb-6">
+    <div
+      class="d-flex align-items-center justify-content-between gap-4 flex-wrap"
+    >
+      <div class="d-flex flex-column gap-2">
+        <h4 class="h3 text-light">Connected accounts</h4>
+        <div class="text-md text-gray-300">Not connected</div>
+      </div>
+      <div class="d-flex align-items-center gap-4 flex-wrap">
+        <button class="btn btn-stroke btn-sm text-white">
+          Connect Apple account
+        </button>
+        <button class="btn btn-stroke btn-sm text-white">
+          Connect Google account
+        </button>
+      </div>
+    </div>
+  </div>
+  <hr class="my-lg-10 my-8" />
+
+  <div class="profileCard">
+    <div
+      class="d-flex align-items-center justify-content-between gap-4 flex-wrap"
+    >
+      <div class="d-flex flex-column gap-2">
+        <h4 class="h3 text-light">Delete account</h4>
+        <div class="text-md text-gray-300">This action cannot be undone.</div>
+      </div>
+      <button class="profile-cancel">Delete account</button>
+    </div>
+  </div>
+</section>

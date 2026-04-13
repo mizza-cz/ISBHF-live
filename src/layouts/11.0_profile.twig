@@ -1,0 +1,20 @@
+{% extends "@components/base/base.twig" %} {% set title = "11.0_profile" %} {%
+block main %}
+
+<div class="bg-gradient-1 min-height-screen">
+  {% include "@components/header/header-reg.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-10 pb-lg-20 pb-10">
+      <div class="container-fluid">
+        <div class="text-center pb-8 border-bottom-1 mb-lg-10 mb-8">
+          <h1 class="h1 text-light mb-4">Joseph McCartney</h1>
+          <div class="text-md text-gray-300">McCartney@isbhf.com</div>
+        </div>
+
+        {% include "@components/profile/profile.twig" %}
+      </div>
+    </section>
+  </main>
+  {% include "@components/footer/footer.twig"%}
+</div>
+{% include "@components/modalPromo/modalPromo.twig"%} {% endblock %}

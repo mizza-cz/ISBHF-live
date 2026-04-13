@@ -1,0 +1,87 @@
+.profile-cancel {
+  background: transparent;
+  color: var(--color-orange-400);
+  border: none;
+  padding: 0 24px;
+  transition: all 0.3s;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  cursor: pointer;
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+  &:hover {
+    text-decoration-color: inherit;
+  }
+}
+.profileCard {
+  background: var(--color-blue-600);
+  padding: 24px;
+  border-radius: 1rem;
+  border: 1px solid #004975;
+}
+.profilePayment {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  &-item {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.2fr) minmax(140px, 0.8fr) auto;
+    gap: 20px;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "card action"
+        "expiry action";
+      align-items: flex-end;
+    }
+  }
+
+  &-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include media-breakpoint-down(md) {
+      gap: 6px;
+    }
+  }
+  &-number__masked {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+      gap: 4px;
+    }
+  }
+}
+
+.profilePayment-expiry,
+.profilePayment-card,
+.profilePayment-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profilePayment-card {
+  @include media-breakpoint-down(md) {
+    grid-area: card;
+  }
+}
+
+.profilePayment-expiry {
+  @include media-breakpoint-down(md) {
+    grid-area: expiry;
+  }
+}
+
+.profilePayment-action {
+  @include media-breakpoint-down(md) {
+    grid-area: action;
+    align-self: flex-end;
+  }
+}

@@ -126,3 +126,19 @@ button.btn-primary {
     }
   }
 }
+
+.btn-sm {
+  padding: 10px 24px;
+}
+
+.btn-accent {
+  color: var(--color-dark);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+  }
+}
