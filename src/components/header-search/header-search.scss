@@ -71,12 +71,16 @@
   height: 100vh;
   background: var(--color-blue-600);
 }
+.headerSearch-results,
+.headerSearch-empty,
 .headerSearch-suggest {
   max-width: 50rem;
   margin: 0 auto;
+  padding-top: 40px;
   @include media-breakpoint-down(lg) {
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 16px;
   }
 }
 .headerSearch-results,
@@ -90,6 +94,9 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 1.1;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 24px;
+  }
 }
 .headerSearch-suggestList {
   list-style: none;
