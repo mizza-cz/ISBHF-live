@@ -10,11 +10,22 @@
     }
   }
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 10px 0 11px;
     position: relative;
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-self: end;
+    
   }
   .btn {
     gap: 12px;

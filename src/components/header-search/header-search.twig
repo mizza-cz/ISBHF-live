@@ -1,0 +1,471 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner header__inner--search">
+      <a href="/" class="header__logo">
+        <img src="images/ico/logo.svg" alt="logo" />
+      </a>
+
+      <nav class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="d-md-none d-flex justify-content-center mx-auto mb-6">
+          <details class="header-login">
+            <summary class="btn btn-stroke">
+              <div class="d-flex gap-2 align-items-center">
+                {% include "@images/user.svg" %} JM
+              </div>
+              {% include "@images/chevron-accent.svg" %}
+            </summary>
+            <ul class="header-login__list">
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Settings</a>
+              </li>
+              <li>
+                <a href="#">Log out</a>
+              </li>
+            </ul>
+          </details>
+        </div>
+        <div class="headerSearchWrap js-header-search-wrap">
+          <form class="headerSearch js-header-search-form" autocomplete="off">
+            <button class="headerSearch-btn" type="submit" aria-label="Search">
+              {% include "@images/search.svg" %}
+            </button>
+
+            <input
+              class="headerSearch-input js-header-search-input"
+              type="text"
+              placeholder="Search"
+            />
+
+            <button
+              class="headerSearch-clear js-header-search-clear"
+              type="button"
+              aria-label="Clear"
+              hidden
+            >
+              {% include "@images/close.svg" %}
+            </button>
+          </form>
+
+          <div class="headerSearch-dropdown js-header-search-dropdown" hidden>
+            <div class="headerSearch-suggest js-search-suggest">
+              <div class="headerSearch-title">Recently searched</div>
+              <ul class="headerSearch-suggestList js-search-suggest-list"></ul>
+            </div>
+
+            <div class="headerSearch-results js-search-results" hidden>
+              <h2
+                class="headerSearch-resultsQuery h2 text-white mb-6 js-search-results-query"
+              ></h2>
+
+              <div class="headerSearch-group js-results-favorite-group" hidden>
+                <h3 class="headerSearch-groupTitle h2 text-white mb-6">
+                  Favorite
+                </h3>
+                <div class="row g-4 js-results-favorite"></div>
+              </div>
+
+              <hr
+                class="headerSearch-divider js-results-favorite-divider"
+                hidden
+              />
+
+              <div class="headerSearch-group js-results-live-group" hidden>
+                <h3 class="headerSearch-groupTitle h2 text-white mb-6">Live</h3>
+                <div class="row g-4 js-results-live"></div>
+              </div>
+
+              <hr class="headerSearch-divider js-results-live-divider" hidden />
+
+              <div class="headerSearch-group js-results-all-group" hidden>
+                <h3 class="headerSearch-groupTitle h2 text-white mb-6">
+                  All results
+                </h3>
+                <div class="row g-4 js-results-all"></div>
+              </div>
+            </div>
+
+            <div class="headerSearch-empty js-search-empty" hidden>
+              <div class="headerSearch-emptyTitle">No results found</div>
+              <div class="headerSearch-emptyText">
+                Try another team, event or match.
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header__action">
+        <div class="d-md-block d-none">
+          <details class="header-login">
+            <summary class="btn btn-stroke">
+              <div class="d-flex gap-2 align-items-center">
+                {% include "@images/user.svg" %} JM
+              </div>
+              {% include "@images/chevron-accent.svg" %}
+            </summary>
+            <ul class="header-login__list">
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Settings</a>
+              </li>
+              <li>
+                <a href="#">Log out</a>
+              </li>
+            </ul>
+          </details>
+        </div>
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const searchData = [
+    {
+      title: "Oberwil Rebells vs. HBC Kladno",
+      image: "images/content/match-live-1.png",
+      badge: "Live",
+      locked: true,
+      tagIcon: "images/content/edmont.png",
+      tagPrimary: "U20 Men’s",
+      tagSecondary: "Group B",
+      group: "live",
+      keywords: ["oberwil", "kladno", "czech", "u20"],
+      url: "#",
+      modalToggle: "modal",
+      modalTarget: "#modalStreamDetail",
+    },
+    {
+      title: "USA vs. Slovakia",
+      image: "images/content/match-live-2.png",
+      badge: "Live",
+      locked: true,
+      tagIcon: "images/content/event-1.png",
+      tagPrimary: "Páňa Cup 2025",
+      tagSecondary: "Bronze",
+      group: "favorite",
+      keywords: ["usa", "slovakia", "czech", "pana"],
+      url: "#",
+      modalToggle: "modal",
+      modalTarget: "#modalStreamDetail",
+    },
+    {
+      title: "Canada vs. Czechia",
+      image: "images/content/match-live-1.png",
+      badge: "Live",
+      locked: false,
+      tagIcon: "images/content/edmont.png",
+      tagPrimary: "U20 Men’s",
+      tagSecondary: "Final",
+      group: "all",
+      keywords: ["canada", "czechia", "czech"],
+      url: "#",
+      modalToggle: "modal",
+      modalTarget: "#modalStreamDetail",
+    },
+  ];
+
+  const recentSearches = ["Czech republic", "Canada", "Slovakia"];
+
+  const wrap = document.querySelector(".js-header-search-wrap");
+  const form = document.querySelector(".js-header-search-form");
+  const input = document.querySelector(".js-header-search-input");
+  const clearBtn = document.querySelector(".js-header-search-clear");
+  const dropdown = document.querySelector(".js-header-search-dropdown");
+
+  const suggestBlock = document.querySelector(".js-search-suggest");
+  const suggestList = document.querySelector(".js-search-suggest-list");
+
+  const resultsBlock = document.querySelector(".js-search-results");
+  const resultsQuery = document.querySelector(".js-search-results-query");
+
+  const emptyBlock = document.querySelector(".js-search-empty");
+
+  const favoriteGroup = document.querySelector(".js-results-favorite-group");
+  const liveGroup = document.querySelector(".js-results-live-group");
+  const allGroup = document.querySelector(".js-results-all-group");
+
+  const favoriteDivider = document.querySelector(
+    ".js-results-favorite-divider"
+  );
+  const liveDivider = document.querySelector(".js-results-live-divider");
+
+  const favoriteList = document.querySelector(".js-results-favorite");
+  const liveList = document.querySelector(".js-results-live");
+  const allList = document.querySelector(".js-results-all");
+
+  function openDropdown() {
+    dropdown.hidden = false;
+  }
+
+  function closeDropdown() {
+    dropdown.hidden = true;
+  }
+
+  function updateClearVisibility() {
+    clearBtn.hidden = !(document.activeElement === input || input.value.trim());
+  }
+
+  function setState(state) {
+    suggestBlock.hidden = state !== "suggest";
+    resultsBlock.hidden = state !== "results";
+    emptyBlock.hidden = state !== "empty";
+  }
+
+  function createSuggestItem(label, removable) {
+    return `
+      <li class="headerSearch-suggestItem">
+        <button type="button" class="headerSearch-suggestLink js-suggest-link">${label}</button>
+        ${
+          removable
+            ? `
+              <button
+                type="button"
+                class="headerSearch-suggestRemove js-suggest-remove"
+                aria-label="Remove"
+              >
+                {% include "@images/close.svg" %}
+              </button>
+            `
+            : ""
+        }
+      </li>
+    `;
+  }
+
+  function createCard(item) {
+    return `
+      <div class="col-xl-3 col-sm-6">
+        <a
+          data-bs-toggle="${item.modalToggle || "modal"}"
+          data-bs-target="${item.modalTarget || "#modalStreamDetail"}"
+          href="${item.url || "#"}"
+          class="streamItem"
+        >
+          <div class="streamItem__img">
+            <img
+              src="${item.image}"
+              loading="lazy"
+              alt="${item.title}"
+            />
+            ${
+              item.badge
+                ? `<div class="btn btn-primary text-sm">${item.badge}</div>`
+                : ""
+            }
+            ${
+              item.locked
+                ? `
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
+                `
+                : ""
+            }
+          </div>
+
+          <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+            <li>
+              ${
+                item.tagIcon
+                  ? `
+                    <img
+                      src="${item.tagIcon}"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                  `
+                  : ""
+              }
+              ${item.tagPrimary || ""}
+            </li>
+            ${item.tagSecondary ? `<li>${item.tagSecondary}</li>` : ""}
+          </ul>
+
+          <h5 class="h5 text-light">${item.title}</h5>
+        </a>
+      </div>
+    `;
+  }
+
+  function getSuggestions(query) {
+    const normalized = query.trim().toLowerCase();
+
+    if (!normalized) {
+      return recentSearches.map((item) => ({
+        label: item,
+        removable: true,
+      }));
+    }
+
+    const unique = [];
+
+    searchData.forEach((item) => {
+      const match =
+        item.title.toLowerCase().includes(normalized) ||
+        item.tagPrimary.toLowerCase().includes(normalized) ||
+        item.tagSecondary.toLowerCase().includes(normalized) ||
+        item.keywords.some((keyword) => keyword.includes(normalized));
+
+      if (match && !unique.includes(item.title)) {
+        unique.push(item.title);
+      }
+    });
+
+    return unique.map((item) => ({
+      label: item,
+      removable: false,
+    }));
+  }
+
+  function bindSuggestEvents() {
+    dropdown.querySelectorAll(".js-suggest-link").forEach((button) => {
+      button.addEventListener("click", function () {
+        input.value = this.textContent.trim();
+        renderResults();
+        updateClearVisibility();
+      });
+    });
+
+    dropdown.querySelectorAll(".js-suggest-remove").forEach((button) => {
+      button.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        const item = this.closest(".headerSearch-suggestItem");
+        const label = item.querySelector(".js-suggest-link").textContent.trim();
+        const index = recentSearches.indexOf(label);
+
+        if (index > -1) {
+          recentSearches.splice(index, 1);
+        }
+
+        renderSuggestions();
+      });
+    });
+  }
+
+  function renderSuggestions() {
+    const query = input.value.trim();
+    const suggestions = getSuggestions(query);
+
+    openDropdown();
+
+    if (!suggestions.length) {
+      suggestList.innerHTML = `
+        <li class="headerSearch-suggestItem">
+          <span>No suggestions</span>
+        </li>
+      `;
+    } else {
+      suggestList.innerHTML = suggestions
+        .map((item) => createSuggestItem(item.label, item.removable))
+        .join("");
+    }
+
+    bindSuggestEvents();
+    setState("suggest");
+    updateClearVisibility();
+  }
+
+  function renderResults() {
+    const query = input.value.trim();
+    const normalized = query.toLowerCase();
+
+    if (!query) {
+      renderSuggestions();
+      return;
+    }
+
+    const filtered = searchData.filter((item) => {
+      return (
+        item.title.toLowerCase().includes(normalized) ||
+        item.tagPrimary.toLowerCase().includes(normalized) ||
+        item.tagSecondary.toLowerCase().includes(normalized) ||
+        item.keywords.some((keyword) => keyword.includes(normalized))
+      );
+    });
+
+    openDropdown();
+
+    if (!filtered.length) {
+      setState("empty");
+      updateClearVisibility();
+      return;
+    }
+
+    const favorite = filtered.filter((item) => item.group === "favorite");
+    const live = filtered.filter((item) => item.group === "live");
+    const all = filtered.filter((item) => item.group === "all");
+
+    resultsQuery.textContent = query;
+
+    favoriteList.innerHTML = favorite.map(createCard).join("");
+    liveList.innerHTML = live.map(createCard).join("");
+    allList.innerHTML = all.map(createCard).join("");
+
+    favoriteGroup.hidden = !favorite.length;
+    liveGroup.hidden = !live.length;
+    allGroup.hidden = !all.length;
+
+    favoriteDivider.hidden = !(favorite.length && (live.length || all.length));
+    liveDivider.hidden = !(live.length && all.length);
+
+    if (!recentSearches.includes(query)) {
+      recentSearches.unshift(query);
+      if (recentSearches.length > 5) {
+        recentSearches.pop();
+      }
+    }
+
+    setState("results");
+    updateClearVisibility();
+  }
+
+  input.addEventListener("focus", function () {
+    renderSuggestions();
+    updateClearVisibility();
+  });
+
+  input.addEventListener("input", function () {
+    renderSuggestions();
+    updateClearVisibility();
+  });
+
+  input.addEventListener("blur", function () {
+    setTimeout(() => {
+      if (!wrap.contains(document.activeElement)) {
+        closeDropdown();
+        updateClearVisibility();
+      }
+    }, 120);
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    renderResults();
+  });
+
+  clearBtn.addEventListener("click", function () {
+    input.value = "";
+    input.focus();
+    renderSuggestions();
+    updateClearVisibility();
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!wrap.contains(e.target)) {
+      closeDropdown();
+      clearBtn.hidden = true;
+    }
+  });
+</script>
