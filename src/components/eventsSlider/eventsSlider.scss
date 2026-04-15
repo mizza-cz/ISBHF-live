@@ -19,13 +19,13 @@
     top: 35%;
   }
   .swiper-btn.next {
-    right: -3rem;
+    right: -64px;
     @include media-breakpoint-down(xxl) {
       right: 0.5rem;
     }
   }
   .swiper-btn.prev {
-    left: -3rem;
+    left: -64px;
     @include media-breakpoint-down(xxl) {
       left: 0.5rem;
     }
