@@ -99,11 +99,32 @@ $(function () {
     centeredSlides: true,
     initialSlide: initialIndex,
     loop: false,
+
     spaceBetween: 48,
+
+    breakpoints: {
+      320: {
+        spaceBetween: 20,
+      },
+      480: {
+        spaceBetween: 24,
+      },
+      768: {
+        spaceBetween: 24,
+      },
+      1024: {
+        spaceBetween: 32,
+      },
+      1280: {
+        spaceBetween: 48,
+      },
+    },
+
     navigation: {
       nextEl: ".calendarSlider .next",
       prevEl: ".calendarSlider .prev",
     },
+
     on: {
       init: function () {
         this.slideTo(initialIndex, 0);

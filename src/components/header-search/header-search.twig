@@ -5,100 +5,77 @@
         <img src="images/ico/logo.svg" alt="logo" />
       </a>
 
-      <nav class="collapse navbar-collapse" id="navbarNavDropdown">
-        <div class="d-md-none d-flex justify-content-center mx-auto mb-6">
-          <details class="header-login">
-            <summary class="btn btn-stroke">
-              <div class="d-flex gap-2 align-items-center">
-                {% include "@images/user.svg" %} JM
-              </div>
-              {% include "@images/chevron-accent.svg" %}
-            </summary>
-            <ul class="header-login__list">
-              <li>
-                <a href="#">Profile</a>
-              </li>
-              <li>
-                <a href="#">Settings</a>
-              </li>
-              <li>
-                <a href="#">Log out</a>
-              </li>
-            </ul>
-          </details>
-        </div>
-        <div class="headerSearchWrap js-header-search-wrap">
-          <form class="headerSearch js-header-search-form" autocomplete="off">
-            <button class="headerSearch-btn" type="submit" aria-label="Search">
-              {% include "@images/search.svg" %}
-            </button>
+      <div class="headerSearchWrap js-header-search-wrap">
+        <form class="headerSearch js-header-search-form" autocomplete="off">
+          <button class="headerSearch-btn" type="submit" aria-label="Search">
+            {% include "@images/search.svg" %}
+          </button>
 
-            <input
-              class="headerSearch-input js-header-search-input"
-              type="text"
-              placeholder="Search"
+          <input
+            class="headerSearch-input js-header-search-input"
+            type="text"
+            placeholder="Search"
+          />
+
+          <button
+            class="headerSearch-clear js-header-search-clear"
+            type="button"
+            aria-label="Clear"
+            hidden
+          >
+            {% include "@images/close.svg" %}
+          </button>
+        </form>
+
+        <div class="headerSearch-dropdown js-header-search-dropdown" hidden>
+          <div class="headerSearch-suggest js-search-suggest">
+            <div class="headerSearch-title">Recently searched</div>
+            <ul class="headerSearch-suggestList js-search-suggest-list"></ul>
+          </div>
+
+          <div class="headerSearch-results js-search-results" hidden>
+            <h2
+              class="headerSearch-resultsQuery h2 text-white mb-6 js-search-results-query"
+            ></h2>
+
+            <div class="headerSearch-group js-results-favorite-group" hidden>
+              <h3 class="headerSearch-groupTitle h2 text-white mb-6">
+                Favorite
+              </h3>
+              <div class="row g-4 js-results-favorite"></div>
+            </div>
+
+            <hr
+              class="headerSearch-divider js-results-favorite-divider"
+              hidden
             />
 
-            <button
-              class="headerSearch-clear js-header-search-clear"
-              type="button"
-              aria-label="Clear"
-              hidden
-            >
-              {% include "@images/close.svg" %}
-            </button>
-          </form>
-
-          <div class="headerSearch-dropdown js-header-search-dropdown" hidden>
-            <div class="headerSearch-suggest js-search-suggest">
-              <div class="headerSearch-title">Recently searched</div>
-              <ul class="headerSearch-suggestList js-search-suggest-list"></ul>
+            <div class="headerSearch-group js-results-live-group" hidden>
+              <h3 class="headerSearch-groupTitle h2 text-white mb-6">Live</h3>
+              <div class="row g-4 js-results-live"></div>
             </div>
 
-            <div class="headerSearch-results js-search-results" hidden>
-              <h2
-                class="headerSearch-resultsQuery h2 text-white mb-6 js-search-results-query"
-              ></h2>
+            <hr class="headerSearch-divider js-results-live-divider" hidden />
 
-              <div class="headerSearch-group js-results-favorite-group" hidden>
-                <h3 class="headerSearch-groupTitle h2 text-white mb-6">
-                  Favorite
-                </h3>
-                <div class="row g-4 js-results-favorite"></div>
-              </div>
-
-              <hr
-                class="headerSearch-divider js-results-favorite-divider"
-                hidden
-              />
-
-              <div class="headerSearch-group js-results-live-group" hidden>
-                <h3 class="headerSearch-groupTitle h2 text-white mb-6">Live</h3>
-                <div class="row g-4 js-results-live"></div>
-              </div>
-
-              <hr class="headerSearch-divider js-results-live-divider" hidden />
-
-              <div class="headerSearch-group js-results-all-group" hidden>
-                <h3 class="headerSearch-groupTitle h2 text-white mb-6">
-                  All results
-                </h3>
-                <div class="row g-4 js-results-all"></div>
-              </div>
+            <div class="headerSearch-group js-results-all-group" hidden>
+              <h3 class="headerSearch-groupTitle h2 text-white mb-6">
+                All results
+              </h3>
+              <div class="row g-4 js-results-all"></div>
             </div>
+          </div>
 
-            <div class="headerSearch-empty js-search-empty" hidden>
-              <div class="headerSearch-emptyTitle">No results found</div>
-              <div class="headerSearch-emptyText">
-                Try another team, event or match.
-              </div>
+          <div class="headerSearch-empty js-search-empty" hidden>
+            <div class="headerSearch-emptyTitle">No results found</div>
+            <div class="headerSearch-emptyText">
+              Try another team, event or match.
             </div>
           </div>
         </div>
-      </nav>
+      </div>
 
       <div class="header__action">
-        <div class="d-md-block d-none">
+        <div class="d-block">
           <details class="header-login">
             <summary class="btn btn-stroke">
               <div class="d-flex gap-2 align-items-center">
@@ -119,9 +96,6 @@
             </ul>
           </details>
         </div>
-        <button class="c-header__opener js-header__opener" type="button">
-          <span></span>
-        </button>
       </div>
     </div>
   </div>
@@ -357,15 +331,18 @@
   function renderSuggestions() {
     const query = input.value.trim();
     const suggestions = getSuggestions(query);
+    const suggestTitle = suggestBlock.querySelector(".headerSearch-title");
 
     openDropdown();
 
+    suggestTitle.hidden = !!query;
+
     if (!suggestions.length) {
       suggestList.innerHTML = `
-        <li class="headerSearch-suggestItem">
-          <span>No suggestions</span>
-        </li>
-      `;
+      <li class="headerSearch-suggestItem">
+        <span>No suggestions</span>
+      </li>
+    `;
     } else {
       suggestList.innerHTML = suggestions
         .map((item) => createSuggestItem(item.label, item.removable))

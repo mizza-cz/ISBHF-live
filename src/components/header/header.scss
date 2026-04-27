@@ -3,6 +3,7 @@
     width: 110px;
     height: 40px;
     display: block;
+    min-width: 110px;
     img {
       width: 100%;
       height: 100%;
@@ -25,7 +26,6 @@
     align-items: center;
     gap: 12px;
     justify-self: end;
-    
   }
   .btn {
     gap: 12px;

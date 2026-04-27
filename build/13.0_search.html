@@ -41,92 +41,65 @@
 							<img src="images/ico/logo.svg" alt="logo" />
 						</a>
 
-						<nav class="collapse navbar-collapse" id="navbarNavDropdown">
-							<div class="d-md-none d-flex justify-content-center mx-auto mb-6">
-								<details class="header-login">
-									<summary class="btn btn-stroke">
-										<div class="d-flex gap-2 align-items-center">
-											<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
-											</svg> JM
-										</div>
-										<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</summary>
-									<ul class="header-login__list">
-										<li>
-											<a href="#">Profile</a>
-										</li>
-										<li>
-											<a href="#">Settings</a>
-										</li>
-										<li>
-											<a href="#">Log out</a>
-										</li>
-									</ul>
-								</details>
-							</div>
-							<div class="headerSearchWrap js-header-search-wrap">
-								<form class="headerSearch js-header-search-form" autocomplete="off">
-									<button class="headerSearch-btn" type="submit" aria-label="Search">
-										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M15.106 5.582a5.971 5.971 0 11-8.444 8.444 5.971 5.971 0 018.444-8.444M15.063 14.06l5.85 5.93" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-										</svg> </button>
+						<div class="headerSearchWrap js-header-search-wrap">
+							<form class="headerSearch js-header-search-form" autocomplete="off">
+								<button class="headerSearch-btn" type="submit" aria-label="Search">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.106 5.582a5.971 5.971 0 11-8.444 8.444 5.971 5.971 0 018.444-8.444M15.063 14.06l5.85 5.93" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg> </button>
 
-									<input class="headerSearch-input js-header-search-input" type="text" placeholder="Search" />
+								<input class="headerSearch-input js-header-search-input" type="text" placeholder="Search" />
 
-									<button class="headerSearch-clear js-header-search-clear" type="button" aria-label="Clear" hidden>
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6.947 6.947l10.105 10.106M17.052 6.947L6.947 17.053" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
-										</svg> </button>
-								</form>
+								<button class="headerSearch-clear js-header-search-clear" type="button" aria-label="Clear" hidden>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.947 6.947l10.105 10.106M17.052 6.947L6.947 17.053" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+									</svg> </button>
+							</form>
 
-								<div class="headerSearch-dropdown js-header-search-dropdown" hidden>
-									<div class="headerSearch-suggest js-search-suggest">
-										<div class="headerSearch-title">Recently searched</div>
-										<ul class="headerSearch-suggestList js-search-suggest-list"></ul>
+							<div class="headerSearch-dropdown js-header-search-dropdown" hidden>
+								<div class="headerSearch-suggest js-search-suggest">
+									<div class="headerSearch-title">Recently searched</div>
+									<ul class="headerSearch-suggestList js-search-suggest-list"></ul>
+								</div>
+
+								<div class="headerSearch-results js-search-results" hidden>
+									<h2 class="headerSearch-resultsQuery h2 text-white mb-6 js-search-results-query"></h2>
+
+									<div class="headerSearch-group js-results-favorite-group" hidden>
+										<h3 class="headerSearch-groupTitle h2 text-white mb-6">
+											Favorite
+										</h3>
+										<div class="row g-4 js-results-favorite"></div>
 									</div>
 
-									<div class="headerSearch-results js-search-results" hidden>
-										<h2 class="headerSearch-resultsQuery h2 text-white mb-6 js-search-results-query"></h2>
+									<hr class="headerSearch-divider js-results-favorite-divider" hidden />
 
-										<div class="headerSearch-group js-results-favorite-group" hidden>
-											<h3 class="headerSearch-groupTitle h2 text-white mb-6">
-												Favorite
-											</h3>
-											<div class="row g-4 js-results-favorite"></div>
-										</div>
-
-										<hr class="headerSearch-divider js-results-favorite-divider" hidden />
-
-										<div class="headerSearch-group js-results-live-group" hidden>
-											<h3 class="headerSearch-groupTitle h2 text-white mb-6">Live</h3>
-											<div class="row g-4 js-results-live"></div>
-										</div>
-
-										<hr class="headerSearch-divider js-results-live-divider" hidden />
-
-										<div class="headerSearch-group js-results-all-group" hidden>
-											<h3 class="headerSearch-groupTitle h2 text-white mb-6">
-												All results
-											</h3>
-											<div class="row g-4 js-results-all"></div>
-										</div>
+									<div class="headerSearch-group js-results-live-group" hidden>
+										<h3 class="headerSearch-groupTitle h2 text-white mb-6">Live</h3>
+										<div class="row g-4 js-results-live"></div>
 									</div>
 
-									<div class="headerSearch-empty js-search-empty" hidden>
-										<div class="headerSearch-emptyTitle">No results found</div>
-										<div class="headerSearch-emptyText">
-											Try another team, event or match.
-										</div>
+									<hr class="headerSearch-divider js-results-live-divider" hidden />
+
+									<div class="headerSearch-group js-results-all-group" hidden>
+										<h3 class="headerSearch-groupTitle h2 text-white mb-6">
+											All results
+										</h3>
+										<div class="row g-4 js-results-all"></div>
+									</div>
+								</div>
+
+								<div class="headerSearch-empty js-search-empty" hidden>
+									<div class="headerSearch-emptyTitle">No results found</div>
+									<div class="headerSearch-emptyText">
+										Try another team, event or match.
 									</div>
 								</div>
 							</div>
-						</nav>
+						</div>
 
 						<div class="header__action">
-							<div class="d-md-block d-none">
+							<div class="d-block">
 								<details class="header-login">
 									<summary class="btn btn-stroke">
 										<div class="d-flex gap-2 align-items-center">
@@ -151,9 +124,6 @@
 									</ul>
 								</details>
 							</div>
-							<button class="c-header__opener js-header__opener" type="button">
-								<span></span>
-							</button>
 						</div>
 					</div>
 				</div>
@@ -370,13 +340,15 @@
 				function renderSuggestions() {
 					const query = input.value.trim();
 					const suggestions = getSuggestions(query);
+					const suggestTitle = suggestBlock.querySelector(".headerSearch-title");
 					openDropdown();
+					suggestTitle.hidden = !!query;
 					if (!suggestions.length) {
 						suggestList.innerHTML = `
-        <li class="headerSearch-suggestItem">
-          <span>No suggestions</span>
-        </li>
-      `;
+      <li class="headerSearch-suggestItem">
+        <span>No suggestions</span>
+      </li>
+    `;
 					} else {
 						suggestList.innerHTML = suggestions
 							.map((item) => createSuggestItem(item.label, item.removable))

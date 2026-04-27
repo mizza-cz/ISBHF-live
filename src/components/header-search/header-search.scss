@@ -6,6 +6,9 @@
   @include media-breakpoint-down(lg) {
     position: relative;
   }
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
   .collapse {
     flex: 1;
     align-self: center;
@@ -21,6 +24,9 @@
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
+  @include media-breakpoint-down(md) {
+    order: 3;
+  }
 }
 .headerSearch {
   position: relative;

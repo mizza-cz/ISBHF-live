@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    @include media-breakpoint-down(md) {
+      width: fit-content;
+    }
   }
   .swiper-btn {
     background: rgba(#045aa3cc, 0.8);
@@ -28,6 +31,9 @@
   display: block;
   width: 100%;
   text-align: center;
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
   &:hover {
     color: var(--color-accent);
   }
@@ -47,5 +53,8 @@
     right: 0;
     margin: 0 auto;
     background: var(--color-accent);
+    @include media-breakpoint-down(md) {
+      bottom: -10px;
+    }
   }
 }
