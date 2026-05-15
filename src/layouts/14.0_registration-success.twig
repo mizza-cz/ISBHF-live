@@ -1,0 +1,42 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"14.0_registration-success" %} {% block main %}
+
+<div class="bg-registration min-height-screen">
+  {% include "@components/header/header.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-lg-16 pt-10 pb-lg-20 pb-10">
+      <div class="container-fluid">
+        <div class="position-relative">
+          <div class="text-center profileCard">
+            <div class="registration-success__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 6L9 17L4 12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h1 class="h2 text-light mb-4 titleDecore">
+              Account successfully activated
+            </h1>
+            <p
+              class="text-gray-300 text-md mx-auto mb-4"
+              style="max-width: 416px"
+            >
+              Your ISBHF TV account has been activated.
+            </p>
+            <p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
+              You can now sign in and start watching international ball hockey
+              on ISBHF TV.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+{% include "@components/modalPromo/modalPromo.twig"%} {% endblock %}
