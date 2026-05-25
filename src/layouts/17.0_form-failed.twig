@@ -1,0 +1,93 @@
+{% extends "@components/base/base.twig" %} {% set title = "17.0_form-failed" %}
+{% block main %}
+
+<div class="bg-registration min-height-screen">
+  {% include "@components/header/header.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-lg-16 pt-10 pb-lg-20 pb-10">
+      <div class="container">
+        <div class="position-relative">
+          <div class="text-center mb-6">
+            <h1 class="h2 text-light mb-4 titleDecore">Welcome back</h1>
+
+            <p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
+              Log in to access live streams, replays, and your personal watch
+              history.
+            </p>
+          </div>
+
+          <div class="registration">
+            <div class="container-xxs">
+              <form class="form" action="/login" method="post" novalidate>
+                <div class="profileCard alert-error">
+                  Wrong e-mail or password.
+                  <br />
+                  Please try again.
+                </div>
+
+                <div class="d-flex flex-column gap-2">
+                  <div class="form-box">
+                    <label class="form-label" for="login-email">E-mail</label>
+
+                    <input
+                      class="form-control is-error"
+                      id="login-email"
+                      name="email"
+                      type="email"
+                      value="admin@admin.com"
+                      placeholder="E-mail"
+                      autocomplete="email"
+                      inputmode="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-box">
+                    <label class="form-label" for="login-password">
+                      Password
+                    </label>
+
+                    <div class="form__pass">
+                      <input
+                        class="form-control is-error"
+                        id="login-password"
+                        name="password"
+                        type="password"
+                        placeholder="Password"
+                        autocomplete="current-password"
+                        required
+                      />
+
+                      <button
+                        type="button"
+                        class="form__pass-toggle"
+                        aria-label="Show password"
+                      >
+                        <span class="icon-show">
+                          <img src="images/ico/eye-hidden.svg" alt="" />
+                        </span>
+
+                        <span class="icon-hide">
+                          <img src="images/ico/eye-visible.svg" alt="" />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary text-dark form-submit mt-6"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+{% include "@components/modalPromo/modalPromo.twig"%} {% endblock %}
