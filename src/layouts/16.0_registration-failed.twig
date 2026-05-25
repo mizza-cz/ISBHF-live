@@ -1,0 +1,55 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"14.0_registration-failed" %} {% block main %}
+
+<div class="bg-registration min-height-screen">
+  {% include "@components/header/header.twig" %}
+  <main class="main" aria-label="Hlavní obsah">
+    <section class="pt-lg-16 pt-10 pb-lg-20 pb-10">
+      <div class="container-fluid">
+        <div class="position-relative">
+          <div class="text-center profileCard py-8">
+            <div
+              class="registration-success__icon registration-success__icon--error"
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M18 6L6 18"
+                  stroke="#ce2621"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6 6L18 18"
+                  stroke="#ce2621"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <h1 class="h2 text-light mb-4 titleDecore">
+              The activation failed
+            </h1>
+
+            <p
+              class="text-gray-300 text-md mx-auto mb-4"
+              style="max-width: 416px"
+            >
+              Your <strong>ISBHF TV</strong> account has not been activated.
+            </p>
+
+            <p class="text-gray-300 text-md mx-auto" style="max-width: 416px">
+              Contact
+              <a href="/support" class="registration__link">
+                customer support
+              </a>
+              to resolve the issue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+{% include "@components/modalPromo/modalPromo.twig"%} {% endblock %}

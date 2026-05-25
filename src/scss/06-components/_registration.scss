@@ -69,3 +69,15 @@
     height: 24px;
   }
 }
+.registration-success__icon--error {
+  border-color: var(--color-red) !important;
+}
+
+.registration__link {
+  color: var(--color-light);
+  transition: all 0.25s ease;
+  &:hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+}
