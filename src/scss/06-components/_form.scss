@@ -32,9 +32,11 @@
       font-size: 0;
     }
   }
+
   &-control:focus {
     background: var(--color-blue-500);
   }
+
   &-submit {
     height: 60px;
     width: 100%;
