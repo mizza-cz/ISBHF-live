@@ -130,4 +130,45 @@
   }
 }
 
+.registration {
+  .select2-container {
+    max-width: 100%;
+  }
+  .select2-container--default .select2-selection--single {
+    height: 60px;
+    width: 100%;
+    background: var(--color-blue-600);
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-white);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: background 0.25s ease;
+    padding-top: 18px;
+    caret-color: var(--color-accent);
+  }
+  .select2-container--open .select2-selection--single,
+  .select2-container:hover .select2-selection--single {
+    background-color: var(--color-blue-500) !important;
+  }
+}
+.form-box--select {
+  .select2-results__options .select2-results__option--highlighted {
+    background-color: var(--color-blue-500) !important;
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow
+    b {
+    margin-top: -8px;
+  }
+  .form-label {
+    top: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
 /*! purgecss end ignore */
