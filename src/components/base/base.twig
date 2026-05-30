@@ -33,6 +33,7 @@
     />
     <!--****** Styles  ******-->
     <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="css/cookie-consent.css" />
     <link rel="stylesheet" media="screen, handheld" href="css/styles.css" />
     <link rel="stylesheet" media="print" href="css/prints.css" />
     <!--****** Styles  ******-->
@@ -54,9 +55,7 @@
     <!-- ****** scripts ****** -->
   </head>
   <body>
-    <div class="base">
-      {% block main %}   {% endblock %}
-    </div>
+    <div class="base">{% block main %} {% endblock %}</div>
     <script
       defer
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -69,6 +68,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="js/cookie-consent-config.js"></script>
+    <script src="js/cookie-consent.js"></script>
     <script defer src="js/scripts.js"></script>
   </body>
 </html>
