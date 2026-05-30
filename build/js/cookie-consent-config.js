@@ -13,7 +13,7 @@ window.cookieConsentSettings = (function () {
   return {
     current_lang: currentLang,
     autoclear_cookies: true,
-    theme_css: "/css/cookie-consent.css",
+    theme_css: "css/cookie-consent.css",
     page_scripts: true,
     languages: {
       cs: {
