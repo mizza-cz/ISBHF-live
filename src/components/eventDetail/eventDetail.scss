@@ -53,13 +53,13 @@
     background: var(--color-accent);
   }
   .swiper-btn.next {
-    right: -64px;
+    right: -32px;
     @include media-breakpoint-down(xxl) {
       right: 0.5rem;
     }
   }
   .swiper-btn.prev {
-    left: -64px;
+    left: -32px;
     @include media-breakpoint-down(xxl) {
       left: 0.5rem;
     }
