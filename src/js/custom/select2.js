@@ -8,3 +8,9 @@ $(function () {
     $(this).closest("form").submit();
   });
 });
+
+$(".js-select-search").select2({
+  width: "100%",
+  placeholder: "Select country",
+  allowClear: true,
+});

@@ -171,4 +171,21 @@
     font-size: 0.75rem;
   }
 }
+
+.select2-search--dropdown .select2-search__field {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  outline-color: var(--color-accent);
+}
+
+.select2-search--dropdown {
+  padding: 0;
+  margin-bottom: 4px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__clear {
+  padding-left: 0;
+  display: none;
+}
 /*! purgecss end ignore */
