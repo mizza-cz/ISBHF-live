@@ -36,9 +36,9 @@ $(function () {
       },
     },
 
-    navigation: {
-      nextEl: ".calendarSlider .next",
-      prevEl: ".calendarSlider .prev",
-    },
+    // navigation: {
+    //   nextEl: ".calendarSlider .next",
+    //   prevEl: ".calendarSlider .prev",
+    // },
   });
 });
