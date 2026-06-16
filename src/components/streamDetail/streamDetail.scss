@@ -142,9 +142,16 @@
     padding-left: 16px;
     padding-right: 16px;
     text-decoration-color: transparent;
+    transition: all 0.25s;
     color: var(--color-dark);
+    path {
+      transition: all 0.25s;
+    }
     &:hover {
-      text-decoration-color: inherit;
+      color: var(--color-light);
+      path {
+        fill: var(--color-light);
+      }
     }
   }
   &__stats {
