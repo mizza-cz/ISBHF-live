@@ -1,235 +1,237 @@
 {% extends "@components/base/base.twig" %} {% set title = "13.0_search" %} {%
 block main %}
 
-<div class="bg-blue-600">
-  {% include "@components/header-search/header-search.twig" %}
-  <main class="main" aria-label="Hlavní obsah">
-    <div class="pt-10 pb-lg-20 pb-10">
-      <div class="container">
-        <h1 class="h2 text-white mb-6">Czech</h1>
-        <div class="row g-4">
-          {% for i in 1..6 %}
-          <div class="col-xl-3 col-sm-6">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#modalStreamDetail"
-              href="#"
-              class="streamItem"
-            >
-              <div class="streamItem__img">
-                <img
-                  src="images/content/match-live-1.png"
-                  loading="lazy"
-                  alt="match"
-                />
-                <div class="btn btn-primary text-sm">Live</div>
-                <div class="streamItem__lock">
-                  <img src="images/ico/lock.svg" alt="lock" />
-                </div>
-              </div>
-              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
-                <li>
+<div class="bg-blue-600 base-wrapper">
+  <div class="base-content">
+    {% include "@components/header-search/header-search.twig" %}
+    <main class="main" aria-label="Hlavní obsah">
+      <div class="pt-10 pb-lg-20 pb-10">
+        <div class="container">
+          <h1 class="h2 text-white mb-6">Czech</h1>
+          <div class="row g-4">
+            {% for i in 1..6 %}
+            <div class="col-xl-3 col-sm-6">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalStreamDetail"
+                href="#"
+                class="streamItem"
+              >
+                <div class="streamItem__img">
                   <img
-                    src="images/content/edmont.png"
-                    width="20"
-                    height="20"
-                    class="object-fit-contain"
-                    alt=""
+                    src="images/content/match-live-1.png"
+                    loading="lazy"
+                    alt="match"
                   />
-                  U20 Men’s
-                </li>
-                <li>Group B</li>
-              </ul>
-              <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
-            </a>
-          </div>
-          <div class="col-xl-3 col-sm-6">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#modalStreamDetail"
-              href="#"
-              class="streamItem"
-            >
-              <div class="streamItem__img">
-                <img
-                  src="images/content/match-live-2.png"
-                  loading="lazy"
-                  alt="match"
-                />
-                <div class="btn btn-primary text-sm">Live</div>
-                <div class="streamItem__lock">
-                  <img src="images/ico/lock.svg" alt="lock" />
+                  <div class="btn btn-primary text-sm">Live</div>
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
                 </div>
-              </div>
-              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
-                <li>
+                <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                  <li>
+                    <img
+                      src="images/content/edmont.png"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                    U20 Men’s
+                  </li>
+                  <li>Group B</li>
+                </ul>
+                <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+              </a>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalStreamDetail"
+                href="#"
+                class="streamItem"
+              >
+                <div class="streamItem__img">
                   <img
-                    src="images/content/event-1.png"
-                    width="20"
-                    height="20"
-                    class="object-fit-contain"
-                    alt=""
+                    src="images/content/match-live-2.png"
+                    loading="lazy"
+                    alt="match"
                   />
-                  Páňa Cup 2025
-                </li>
-                <li>Bronze</li>
-              </ul>
-              <h5 class="h5 text-light">USA vs. Slovakia</h5>
-            </a>
-          </div>
-          {% endfor %}
-        </div>
-        <hr />
-        <h2 class="h2 text-white mb-6">Favorite</h2>
-        <div class="row g-4">
-          {% for i in 1..6 %}
-          <div class="col-xl-3 col-sm-6">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#modalStreamDetail"
-              href="#"
-              class="streamItem"
-            >
-              <div class="streamItem__img">
-                <img
-                  src="images/content/match-live-1.png"
-                  loading="lazy"
-                  alt="match"
-                />
-                <div class="btn btn-primary text-sm">Live</div>
-                <div class="streamItem__lock">
-                  <img src="images/ico/lock.svg" alt="lock" />
+                  <div class="btn btn-primary text-sm">Live</div>
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
                 </div>
-              </div>
-              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
-                <li>
-                  <img
-                    src="images/content/edmont.png"
-                    width="20"
-                    height="20"
-                    class="object-fit-contain"
-                    alt=""
-                  />
-                  U20 Men’s
-                </li>
-                <li>Group B</li>
-              </ul>
-              <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
-            </a>
+                <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                  <li>
+                    <img
+                      src="images/content/event-1.png"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                    Páňa Cup 2025
+                  </li>
+                  <li>Bronze</li>
+                </ul>
+                <h5 class="h5 text-light">USA vs. Slovakia</h5>
+              </a>
+            </div>
+            {% endfor %}
           </div>
-          <div class="col-xl-3 col-sm-6">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#modalStreamDetail"
-              href="#"
-              class="streamItem"
-            >
-              <div class="streamItem__img">
-                <img
-                  src="images/content/match-live-2.png"
-                  loading="lazy"
-                  alt="match"
-                />
-                <div class="btn btn-primary text-sm">Live</div>
-                <div class="streamItem__lock">
-                  <img src="images/ico/lock.svg" alt="lock" />
+          <hr />
+          <h2 class="h2 text-white mb-6">Favorite</h2>
+          <div class="row g-4">
+            {% for i in 1..6 %}
+            <div class="col-xl-3 col-sm-6">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalStreamDetail"
+                href="#"
+                class="streamItem"
+              >
+                <div class="streamItem__img">
+                  <img
+                    src="images/content/match-live-1.png"
+                    loading="lazy"
+                    alt="match"
+                  />
+                  <div class="btn btn-primary text-sm">Live</div>
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
                 </div>
-              </div>
-              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
-                <li>
+                <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                  <li>
+                    <img
+                      src="images/content/edmont.png"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                    U20 Men’s
+                  </li>
+                  <li>Group B</li>
+                </ul>
+                <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+              </a>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalStreamDetail"
+                href="#"
+                class="streamItem"
+              >
+                <div class="streamItem__img">
                   <img
-                    src="images/content/event-1.png"
-                    width="20"
-                    height="20"
-                    class="object-fit-contain"
-                    alt=""
+                    src="images/content/match-live-2.png"
+                    loading="lazy"
+                    alt="match"
                   />
-                  Páňa Cup 2025
-                </li>
-                <li>Bronze</li>
-              </ul>
-              <h5 class="h5 text-light">USA vs. Slovakia</h5>
-            </a>
-          </div>
-          {% endfor %}
-        </div>
-        <hr />
-        <h3 class="h2 text-white mb-6">Live</h3>
-        <div class="row g-4">
-          {% for i in 1..6 %}
-          <div class="col-xl-3 col-sm-6">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#modalStreamDetail"
-              href="#"
-              class="streamItem"
-            >
-              <div class="streamItem__img">
-                <img
-                  src="images/content/match-live-1.png"
-                  loading="lazy"
-                  alt="match"
-                />
-                <div class="btn btn-primary text-sm">Live</div>
-                <div class="streamItem__lock">
-                  <img src="images/ico/lock.svg" alt="lock" />
+                  <div class="btn btn-primary text-sm">Live</div>
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
                 </div>
-              </div>
-              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
-                <li>
-                  <img
-                    src="images/content/edmont.png"
-                    width="20"
-                    height="20"
-                    class="object-fit-contain"
-                    alt=""
-                  />
-                  U20 Men’s
-                </li>
-                <li>Group B</li>
-              </ul>
-              <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
-            </a>
+                <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                  <li>
+                    <img
+                      src="images/content/event-1.png"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                    Páňa Cup 2025
+                  </li>
+                  <li>Bronze</li>
+                </ul>
+                <h5 class="h5 text-light">USA vs. Slovakia</h5>
+              </a>
+            </div>
+            {% endfor %}
           </div>
-          <div class="col-xl-3 col-sm-6">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#modalStreamDetail"
-              href="#"
-              class="streamItem"
-            >
-              <div class="streamItem__img">
-                <img
-                  src="images/content/match-live-2.png"
-                  loading="lazy"
-                  alt="match"
-                />
-                <div class="btn btn-primary text-sm">Live</div>
-                <div class="streamItem__lock">
-                  <img src="images/ico/lock.svg" alt="lock" />
+          <hr />
+          <h3 class="h2 text-white mb-6">Live</h3>
+          <div class="row g-4">
+            {% for i in 1..6 %}
+            <div class="col-xl-3 col-sm-6">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalStreamDetail"
+                href="#"
+                class="streamItem"
+              >
+                <div class="streamItem__img">
+                  <img
+                    src="images/content/match-live-1.png"
+                    loading="lazy"
+                    alt="match"
+                  />
+                  <div class="btn btn-primary text-sm">Live</div>
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
                 </div>
-              </div>
-              <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
-                <li>
+                <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                  <li>
+                    <img
+                      src="images/content/edmont.png"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                    U20 Men’s
+                  </li>
+                  <li>Group B</li>
+                </ul>
+                <h5 class="h5 text-light">Oberwil Rebells vs. HBC Kladno</h5>
+              </a>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalStreamDetail"
+                href="#"
+                class="streamItem"
+              >
+                <div class="streamItem__img">
                   <img
-                    src="images/content/event-1.png"
-                    width="20"
-                    height="20"
-                    class="object-fit-contain"
-                    alt=""
+                    src="images/content/match-live-2.png"
+                    loading="lazy"
+                    alt="match"
                   />
-                  Páňa Cup 2025
-                </li>
-                <li>Bronze</li>
-              </ul>
-              <h5 class="h5 text-light">USA vs. Slovakia</h5>
-            </a>
+                  <div class="btn btn-primary text-sm">Live</div>
+                  <div class="streamItem__lock">
+                    <img src="images/ico/lock.svg" alt="lock" />
+                  </div>
+                </div>
+                <ul class="tags text-gray-200 mb-2 px-2 py-1 text-sm">
+                  <li>
+                    <img
+                      src="images/content/event-1.png"
+                      width="20"
+                      height="20"
+                      class="object-fit-contain"
+                      alt=""
+                    />
+                    Páňa Cup 2025
+                  </li>
+                  <li>Bronze</li>
+                </ul>
+                <h5 class="h5 text-light">USA vs. Slovakia</h5>
+              </a>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
   {% include "@components/footer/footer.twig"%}
 </div>
 {% include "@components/streamDetail/streamDetail.twig" %} {% endblock %}

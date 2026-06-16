@@ -33,440 +33,448 @@
 
 <body>
 	<div class="base">
-		<div class="bg-blue-600">
-			<header class="header">
-				<div class="container">
-					<div class="header__inner">
-						<a href="/" class="header__logo">
-							<img src="images/ico/logo.svg" alt="logo" />
-						</a>
-
-						<nav class="collapse navbar-collapse" id="navbarNavDropdown">
-							<ul class="navbar-nav">
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="events" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Events
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="events">
-										<li><a class="dropdown-item" href="#">event 1</a></li>
-										<li><a class="dropdown-item" href="#">event 2</a></li>
-										<li>
-											<a class="dropdown-item" href="#">event 3 </a>
-										</li>
-									</ul>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Schedule
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="members">
-										<li><a class="dropdown-item" href="#">Schedule</a></li>
-										<li><a class="dropdown-item" href="#">Schedule</a></li>
-									</ul>
-								</li>
-
-								<li class="nav-item">
-									<a class="nav-link" href="#"> FAQ </a>
-								</li>
-							</ul>
-
-							<div class="d-md-none d-flex justify-content-center mx-auto">
-								<details class="header-login">
-									<summary class="btn btn-stroke">
-										<div class="d-flex gap-2 align-items-center">
-											<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
-											</svg> JM
-										</div>
-										<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</summary>
-									<ul class="header-login__list">
-										<li>
-											<a href="#">Profile</a>
-										</li>
-										<li>
-											<a href="#">Settings</a>
-										</li>
-										<li>
-											<a href="#">Log out</a>
-										</li>
-									</ul>
-								</details>
-							</div>
-						</nav>
-						<div class="header__action">
-							<a href="#" class="iconBtn"> <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.106 5.582a5.971 5.971 0 11-8.444 8.444 5.971 5.971 0 018.444-8.444M15.063 14.06l5.85 5.93" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg> </a>
-
-							<div class="d-md-block d-none">
-								<details class="header-login">
-									<summary class="btn btn-stroke">
-										<div class="d-flex gap-2 align-items-center">
-											<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
-											</svg> JM
-										</div>
-										<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</summary>
-									<ul class="header-login__list">
-										<li>
-											<a href="#">Profile</a>
-										</li>
-										<li>
-											<a href="#">Settings</a>
-										</li>
-										<li>
-											<a href="#">Log out</a>
-										</li>
-									</ul>
-								</details>
-							</div>
-							<button class="c-header__opener js-header__opener" type="button">
-								<span></span>
-							</button>
-						</div>
-					</div>
-				</div>
-			</header>
-			<main class="main" aria-label="Hlavní obsah">
-				<section class="pt-10 pb-lg-20 pb-10">
+		<div class="bg-blue-600 base-wrapper">
+			<div class="base-content">
+				<header class="header">
 					<div class="container">
-						<h1 class="h2 titleDecore text-white text-uppercase">events</h1>
-						<hr />
-						<h2 class="h2 mb-6 text-white">2026</h2>
-						<div class="row g-4">
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-1.png" width="100%" height="90px" />
-									</a>
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
-									</a>
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
-									</a>
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-banska.svg" width="100%" height="90px" />
-									</a>
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6"> 2026 Master </a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-bratislava.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-banska.svg" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6"> 2026 Master </a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-bratislava.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-						</div>
+						<div class="header__inner">
+							<a href="/" class="header__logo">
+								<img src="images/ico/logo.svg" alt="logo" />
+							</a>
 
-						<hr />
+							<nav class="collapse navbar-collapse" id="navbarNavDropdown">
+								<ul class="navbar-nav">
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="events" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+											Events
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="events">
+											<li><a class="dropdown-item" href="#">event 1</a></li>
+											<li><a class="dropdown-item" href="#">event 2</a></li>
+											<li>
+												<a class="dropdown-item" href="#">event 3 </a>
+											</li>
+										</ul>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+											Schedule
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="members">
+											<li><a class="dropdown-item" href="#">Schedule</a></li>
+											<li><a class="dropdown-item" href="#">Schedule</a></li>
+										</ul>
+									</li>
 
-						<h2 class="h2 mb-6 text-white">2025</h2>
-						<div class="row g-4">
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-1.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
+									<li class="nav-item">
+										<a class="nav-link" href="#"> FAQ </a>
+									</li>
+								</ul>
 
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+								<div class="d-md-none d-flex justify-content-center mx-auto">
+									<details class="header-login">
+										<summary class="btn btn-stroke">
+											<div class="d-flex gap-2 align-items-center">
+												<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
+												</svg> JM
+											</div>
+											<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</summary>
+										<ul class="header-login__list">
+											<li>
+												<a href="#">Profile</a>
+											</li>
+											<li>
+												<a href="#">Settings</a>
+											</li>
+											<li>
+												<a href="#">Log out</a>
+											</li>
+										</ul>
+									</details>
 								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star active">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
-									</a>
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-						</div>
+							</nav>
+							<div class="header__action">
+								<a href="#" class="iconBtn"> <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.106 5.582a5.971 5.971 0 11-8.444 8.444 5.971 5.971 0 018.444-8.444M15.063 14.06l5.85 5.93" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg> </a>
 
-						<hr />
-
-						<h2 class="h2 mb-6 text-white">2023</h2>
-						<div class="row g-4">
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-1.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+								<div class="d-md-block d-none">
+									<details class="header-login">
+										<summary class="btn btn-stroke">
+											<div class="d-flex gap-2 align-items-center">
+												<svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M7.5 1.667a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM2.5 5a5 5 0 1110 0 5 5 0 01-10 0zm1.667 8.333a2.5 2.5 0 00-2.5 2.5.833.833 0 01-1.667 0 4.167 4.167 0 014.167-4.166h6.666A4.167 4.167 0 0115 15.833a.833.833 0 01-1.667 0 2.5 2.5 0 00-2.5-2.5H4.167z" fill="#fff" />
+												</svg> JM
+											</div>
+											<svg class="chevron-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8 10l4 4 4-4" stroke="#F7602B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</summary>
+										<ul class="header-login__list">
+											<li>
+												<a href="#">Profile</a>
+											</li>
+											<li>
+												<a href="#">Settings</a>
+											</li>
+											<li>
+												<a href="#">Log out</a>
+											</li>
+										</ul>
+									</details>
 								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-banska.svg" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6"> 2026 Master </a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-bratislava.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
-							</div>
-
-							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-								<div class="eventItem">
-									<button class="eventItem__star">
-										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
-										</svg> </button>
-									<a href="#" class="eventItem__img">
-										<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
-									</a>
-									<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
-										2026 Master World Championship
-									</a>
-									<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
-								</div>
+								<button class="c-header__opener js-header__opener" type="button">
+									<span></span>
+								</button>
 							</div>
 						</div>
 					</div>
-				</section>
-			</main>
+				</header>
+				<main class="main" aria-label="Hlavní obsah">
+					<section class="pt-10 pb-lg-20 pb-10">
+						<div class="container">
+							<h1 class="h2 titleDecore text-white text-uppercase">events</h1>
+							<hr />
+							<h2 class="h2 mb-6 text-white">2026</h2>
+							<div class="row g-4">
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-1.png" width="100%" height="90px" />
+										</a>
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
+										</a>
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
+										</a>
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-banska.svg" width="100%" height="90px" />
+										</a>
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-bratislava.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-banska.svg" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-bratislava.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+							</div>
+
+							<hr />
+
+							<h2 class="h2 mb-6 text-white">2025</h2>
+							<div class="row g-4">
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-1.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star active">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
+										</a>
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+							</div>
+
+							<hr />
+
+							<h2 class="h2 mb-6 text-white">2023</h2>
+							<div class="row g-4">
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-1.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-2.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-3.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-banska.svg" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-bratislava.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+
+								<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+									<div class="eventItem">
+										<button class="eventItem__star">
+											<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.386.691c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.921-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L.414 7.865c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69L8.386.69z" fill="#fff" />
+											</svg> </button>
+										<a href="#" class="eventItem__img">
+											<img class="object-fit-contain" alt="app" src="images/content/event-sheffield.png" width="100%" height="90px" />
+										</a>
+										<a href="#" class="h5 d-block mb-2 mt-auto pt-6">
+											2026 Master World Championship
+										</a>
+										<p class="text-gray-200 text-sm">July 28 – August 1, 2026</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+			</div>
 			<footer class="footer">
 				<div class="container">
 					<div class="row g-5">

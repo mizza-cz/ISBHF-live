@@ -1,11 +1,13 @@
 {% extends "@components/base/base.twig" %} {% set title = "12.0_event-detail" %}
 {% block main %}
 
-<div class="eventDetail-bg">
-  {% include "@components/header/header-reg.twig" %}
-  <main class="main" aria-label="Hlavní obsah">
-    {% include "@components/eventDetail/eventDetail.twig"%}
-  </main>
+<div class="eventDetail-bg base-wrapper">
+  <div class="base-content">
+    {% include "@components/header/header-reg.twig" %}
+    <main class="main" aria-label="Hlavní obsah">
+      {% include "@components/eventDetail/eventDetail.twig"%}
+    </main>
+  </div>
   {% include "@components/footer/footer.twig"%}
 </div>
 {% include "@components/streamDetail/streamDetail.twig" %} {% endblock %}

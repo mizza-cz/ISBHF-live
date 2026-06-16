@@ -1,4 +1,5 @@
 .footer {
+  flex: 0 0 auto;
   padding: 64px 0;
   @include media-breakpoint-down(lg) {
     padding-bottom: 32px;
