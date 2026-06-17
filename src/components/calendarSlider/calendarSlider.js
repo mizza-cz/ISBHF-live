@@ -1,52 +1,11 @@
-let calendarSwiper = null;
+const paginationList = document.querySelector(".calendarPagination-list");
+const activeItem = document.querySelector(".calendarPagination-item.active");
 
-function initCalendarSlider() {
-  const $slider = $(".calendarSlider");
+if (!paginationList || !activeItem) return;
 
-  if (!$slider.length) return;
+const scrollPosition =
+  activeItem.offsetLeft -
+  paginationList.clientWidth / 2 +
+  activeItem.clientWidth / 2;
 
-  let initialIndex = $slider
-    .find(".calendarSlider-day.is-active")
-    .closest(".swiper-slide")
-    .index();
-
-  if (initialIndex < 0) {
-    initialIndex = 0;
-  }
-
-  if (calendarSwiper) {
-    calendarSwiper.destroy(true, true);
-    calendarSwiper = null;
-  }
-
-  calendarSwiper = new Swiper(".calendarSlider", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    initialSlide: initialIndex,
-    loop: false,
-    spaceBetween: 48,
-
-    breakpoints: {
-      320: { spaceBetween: 20 },
-      480: { spaceBetween: 24 },
-      768: { spaceBetween: 24 },
-      1024: { spaceBetween: 32 },
-      1280: { spaceBetween: 48 },
-    },
-
-    navigation: {
-      nextEl: ".calendarSlider .next",
-      prevEl: ".calendarSlider .prev",
-    },
-  });
-}
-
-$(function () {
-  initCalendarSlider();
-
-  if (window.naja) {
-    naja.snippetHandler.addEventListener("afterUpdate", function () {
-      initCalendarSlider();
-    });
-  }
-});
+paginationList.scrollLeft = scrollPosition;

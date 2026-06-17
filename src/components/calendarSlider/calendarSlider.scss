@@ -1,24 +1,48 @@
-.calendarSlider {
+.calendarPagination {
+  position: relative;
   margin-bottom: 32px;
   height: 58px;
-  .swiper-wrapper {
-    justify-content: space-between;
+}
+
+.calendarPagination-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 0;
+  padding: 0 56px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-left: 40px;
+  &::-webkit-scrollbar {
+    display: none;
   }
-  .swiper-slide {
-    width: 104px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    @include media-breakpoint-down(md) {
-      width: fit-content;
-    }
-  }
-  .swiper-btn {
-    background: rgba(#045aa3cc, 0.8);
+
+  @include media-breakpoint-down(md) {
+    gap: 24px;
+    padding: 0 48px;
   }
 }
-.calendarSlider-day {
+
+.calendarPagination-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.3rem;
+  &.active {
+    scroll-margin-inline: 56px;
+
+    @include media-breakpoint-down(md) {
+      scroll-margin-inline: 48px;
+    }
+  }
+}
+
+.calendarPagination-link {
   white-space: nowrap;
   font-weight: 400;
   font-size: 20px;
@@ -27,34 +51,79 @@
   text-align: center;
   transition: color 0.25s ease;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  position: relative;
   display: block;
   width: 100%;
-  text-align: center;
   @include media-breakpoint-down(md) {
     font-size: 18px;
   }
+
   &:hover {
     color: var(--color-accent);
   }
+
+  &.is-active,
+  &[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 600;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      margin: 0 auto;
+      background: var(--color-accent);
+
+      @include media-breakpoint-down(md) {
+        bottom: -10px;
+      }
+    }
+  }
 }
 
-.swiper-slide.swiper-slide-active .calendarSlider-day {
-  color: var(--color-accent);
-  position: relative;
-  font-weight: 600;
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -14px;
-    height: 2px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background: var(--color-accent);
-    @include media-breakpoint-down(md) {
-      bottom: -10px;
-    }
+.calendarPagination-link--prev,
+.calendarPagination-link--next {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(#045aa3cc, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background: rgba(#045aa3cc, 1);
+  }
+}
+
+.calendarPagination-link--prev {
+  left: 0;
+
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.calendarPagination-link--next {
+  right: 0;
+
+  svg {
+    transform: rotate(-90deg);
   }
 }
