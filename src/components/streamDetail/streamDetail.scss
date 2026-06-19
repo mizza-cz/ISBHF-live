@@ -218,3 +218,28 @@
     margin-top: -40px;
   }
 }
+
+.modal.show.modalStream {
+  @include media-breakpoint-down(sm) {
+    .modal-dialog {
+      width: calc(100vw - 1rem);
+      max-width: calc(100vw - 1rem);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .modal-content {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .modal-body {
+      max-width: 100%;
+      overflow: hidden;
+      padding: 0;
+      [style*="min-width"] {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+      }
+    }
+  }
+}
