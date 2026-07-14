@@ -1,16 +1,27 @@
-$(".js-select").select2({
-  width: "100%",
-  minimumResultsForSearch: -1,
-});
-
 $(function () {
-  $(".js-select").on("change", function () {
-    $(this).closest("form").submit();
-  });
-});
+  $(".js-select").each(function () {
+    const $select = $(this);
+    const $form = $select.closest("form");
 
-$(".js-select-search").select2({
-  width: "100%",
-  placeholder: "Select country",
-  allowClear: true,
+    $select.select2({
+      width: "style",
+      minimumResultsForSearch: Infinity,
+      dropdownParent: $form,
+    });
+  });
+
+  $(".js-select").on("change", function () {
+    $(this).closest("form").trigger("submit");
+  });
+
+  $(".js-select-search").each(function () {
+    const $select = $(this);
+
+    $select.select2({
+      width: "100%",
+      placeholder: "Select country",
+      allowClear: true,
+      dropdownParent: $select.parent(),
+    });
+  });
 });
