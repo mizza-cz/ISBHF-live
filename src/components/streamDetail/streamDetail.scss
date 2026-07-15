@@ -200,6 +200,12 @@
       }
     }
   }
+  &__star.active {
+    background: var(--color-accent);
+    svg path {
+      fill: var(--color-light);
+    }
+  }
 }
 
 .streamDetail__content {
